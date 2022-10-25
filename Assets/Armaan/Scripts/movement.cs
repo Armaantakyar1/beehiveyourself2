@@ -6,8 +6,7 @@ public class movement : MonoBehaviour
 {
     private CharacterController controller;
     public static float speed = 5.0f;
-    public static bool move = true;
-    public static bool jump = true;
+    
     private float yvelocity;
 
 
@@ -24,8 +23,7 @@ public class movement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontal, 0, vertical);
-        Vector3 velocity = direction * speed;
-        velocity.y = yvelocity;
+        Vector3 velocity = direction * speed;      
         controller.Move(velocity * Time.deltaTime);
     }
 }
