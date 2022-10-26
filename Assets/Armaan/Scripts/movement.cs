@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
     private CharacterController controller;
     public static float speed = 5.0f;
     
-    private float yvelocity;
+    
 
 
 
