@@ -1,79 +1,116 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PeasantBees : MonoBehaviour
 {
-   // [SerializeField] Vector3 Target;
-    //[SerializeField] GameObject LeaderBee;
-    Targets target;
-    Vector3 Direction;
-    [SerializeField] float MaximumVelocity=10f;
-    [SerializeField] float SlowingDownDistance;
-    [SerializeField] float StopDistance;
+
+    [SerializeField] Transform target;
+    Vector3 direction;
+    [SerializeField] float maximumSpeed=10f;
+    [SerializeField] float slowingDownDistance;
+    [SerializeField] float stopDistance;
     [SerializeField] float distance;
-    [SerializeField] float speed = 2;
-    [SerializeField]Rigidbody rb;
-    // Start is called before the first frame update
+    [SerializeField] float steeringSpeed = 2;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] private float seperationForce;
+
+    [SerializeField]List<PeasantBees> neighbourPeassants = new();
+    
+    public void SwitchTargets(Transform targetToFollow)
+    {
+        this.target = targetToFollow;
+    }
     void Start()
     {
-        
+        rb.useGravity = false;
+
     }
 
 
     void Update()
     {
-        SeekLeaderBee();
-        Truncate();
-        //Arrive();
+        if (neighbourPeassants.Count > 0)
+        {
+            Seperate();
+            
+        }
+        if (target != null)
+        {
+            SeekTarget();
+            float ratio  =Arrive();
+            LimitVelocity(maximumSpeed * ratio);
+        }
+
     }
 
-    void SeekLeaderBee()
+    private void Seperate()
     {
-        target.Target1 = target.LeaderBee.transform.position;
-        Direction = (target.Target1 - transform.position).normalized * speed;
-        rb.velocity += Direction;
-        if (rb.velocity.magnitude> MaximumVelocity)
+        Vector3 seperationDirection = Vector3.zero;
+        for (int i = 0; i < neighbourPeassants.Count; i++)
         {
-            rb.velocity = rb.velocity.normalized * MaximumVelocity;
+            seperationDirection += (this.transform.position - neighbourPeassants[i].transform.position);
         }
+        rb.velocity += seperationDirection.normalized * seperationForce;
+    }
+
+    void SeekTarget()
+    {
+        direction = (target.transform.position - transform.position).normalized ;
+        rb.velocity += direction * steeringSpeed;
+
     }
 
     float Arrive()
     {
-        distance = Vector3.Distance(a: target.Target1, b: transform.position);
-        /*if (distance>SlowingDownDistance)
+        distance = Vector3.Distance(target.transform.position, transform.position);
+        if (distance > 2)
         {
             return 1;
         }
-
-        if (distance<SlowingDownDistance)
+        if (distance > 1)
         {
-            return 0;
-        }*/
-        if (SlowingDownDistance==5)
-        {
-            return 5;
+            return .8f;
         }
-        if (SlowingDownDistance == 3)
+        if (distance > .7f)
         {
-            return 3;
+            return .5f;
         }
-        if (SlowingDownDistance == 2)
-        {
-            return 2;
-        }
-        speed = 1 / (SlowingDownDistance - StopDistance);
-        return speed * (distance - StopDistance);
+        return 0;
 
 
     }
-    void Truncate()
+
+    void LimitVelocity(float speed)
     {
-        speed = Arrive();
         if (rb.velocity.magnitude > speed)
         {
-            rb.velocity = rb.velocity.normalized * speed ;
+            rb.velocity = rb.velocity.normalized * speed;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PeassantBees"))
+        {
+            var neighbour = other.GetComponent<PeasantBees>();
+            if (!neighbourPeassants.Contains(neighbour)&& neighbour)
+            {
+                neighbourPeassants.Add(neighbour);
+            }
+        }
+        //add to the list
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("PeassantBees"))
+        {
+            var neighbour = other.GetComponent<PeasantBees>();
+            if (neighbourPeassants.Contains(neighbour))
+            {
+                neighbourPeassants.Remove(neighbour);
+            }
+        }
+
     }
 }

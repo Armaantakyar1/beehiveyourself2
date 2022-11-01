@@ -5,7 +5,6 @@ using UnityEngine;
 public class Targets : MonoBehaviour
 {
     public GameObject LeaderBee;
-    public Vector3 Target1;
     // Start is called before the first frame update
     void Start()
     {
