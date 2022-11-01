@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5790287066518239296}
   m_Layer: 0
   m_Name: Peasant Bee
-  m_TagString: Untagged
+  m_TagString: Peasant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
