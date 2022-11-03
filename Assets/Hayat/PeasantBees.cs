@@ -55,14 +55,14 @@ public class PeasantBees : MonoBehaviour
         rb.velocity += seperationDirection.normalized * seperationForce;
     }
 
-    void SeekTarget()
+    public void SeekTarget()
     {
         direction = (target.transform.position - transform.position).normalized ;
         rb.velocity += direction * steeringSpeed;
 
     }
 
-    float Arrive()
+    public float Arrive()
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
         if (distance > 2)
