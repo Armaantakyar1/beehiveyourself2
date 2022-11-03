@@ -29,12 +29,16 @@ namespace Assets.Hayat
            /// check if the flower can hold more bees         
            /// set current flower to be th
            /// add bee to flower
-           if (dispatch == true)
+           if (other.CompareTag("Flowers"))
             {
+                if (dispatch == true)
+                {
 
-                Debug.Log("bee dispatched");
+                    Debug.Log("bee dispatched");
 
+                }
             }
+
 
         }
 
