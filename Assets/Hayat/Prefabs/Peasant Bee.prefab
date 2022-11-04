@@ -143,13 +143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  maximumSpeed: 2
+  maximumSpeed: 5
   slowingDownDistance: 4
   stopDistance: 2
   distance: 0
   steeringSpeed: 0.3
   rb: {fileID: 7254795992385443345}
-  seperationForce: 0
+  seperationForce: 0.1
   neighbourPeassants: []
 --- !u!135 &7254795992385443350
 SphereCollider:
