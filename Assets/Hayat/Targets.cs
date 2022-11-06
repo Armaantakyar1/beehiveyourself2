@@ -5,6 +5,7 @@ using UnityEngine;
 public class Targets : MonoBehaviour
 {
     public GameObject LeaderBee;
+    public GameObject Flowers;
     // Start is called before the first frame update
     void Start()
     {

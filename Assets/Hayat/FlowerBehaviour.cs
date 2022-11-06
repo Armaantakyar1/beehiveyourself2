@@ -6,6 +6,7 @@ public class FlowerBehaviour : MonoBehaviour
 {
     public int NectarAmount;
     [SerializeField]int numberOfBes;
+    public List<PeasantBees> bees = new();
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
@@ -19,6 +20,20 @@ public class FlowerBehaviour : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PeassantBees"))
+        {
+            if(other.GetComponent<PeasantBees>() != null) {
+                //bees.Add(other.gameObject);
+                PeasantBees pBee = other.GetComponent<PeasantBees>();
+                bees.Add(pBee);
+            }
+        }
+    }
+
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag== "Player")

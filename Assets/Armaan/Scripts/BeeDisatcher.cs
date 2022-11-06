@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 namespace Assets.Hayat
@@ -8,8 +7,7 @@ namespace Assets.Hayat
 
     class BeeDisatcher : MonoBehaviour
     {
-        List<Bee> beesInSwarm;
-        FlowerBehaviour currentFlower;
+        public List<BeeDisatcher> beesInSwarm = new();
         bool dispatch;
 
         private void Update()
@@ -33,8 +31,12 @@ namespace Assets.Hayat
             {
                 if (dispatch == true)
                 {
-
-                    Debug.Log("bee dispatched");
+                    FlowerBehaviour currentflower = other.GetComponent<FlowerBehaviour>();
+                    if (currentflower.bees.Count == 0)
+                    {
+                        currentflower.bees.Clear();
+                    }
+                    
 
                 }
             }
