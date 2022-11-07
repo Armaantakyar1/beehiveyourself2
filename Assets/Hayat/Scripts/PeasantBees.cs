@@ -59,13 +59,13 @@ public class PeasantBees : MonoBehaviour
     {
         direction = (target.transform.position - transform.position).normalized ;
         rb.velocity += direction * steeringSpeed;
-
+        Arrive();
     }
 
     public float Arrive()
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
-        if (distance > 2)
+        if (distance > 5)
         {
             return 1;
         }
@@ -78,7 +78,7 @@ public class PeasantBees : MonoBehaviour
             return .5f;
         }
         return 0;
-
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maximumSpeed);
 
     }
 
