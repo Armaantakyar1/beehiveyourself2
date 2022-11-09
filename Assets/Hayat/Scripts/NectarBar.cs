@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectingNectar : MonoBehaviour
+public class NectarBar : MonoBehaviour
 {
-    [SerializeField] int NectarBar;
+    [SerializeField] int beeNectarAmount;
     FlowerBehaviour FlowersScript;
     //pinkFlowers FlowerNectar;
      void Start()
@@ -22,9 +22,5 @@ public class CollectingNectar : MonoBehaviour
             Debug.Log(NectarBar);
         }*/
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
