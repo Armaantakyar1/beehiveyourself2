@@ -1,12 +1,14 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlowerBehaviour : MonoBehaviour
 {
-    public int NectarAmount;
+    public float flowerNectarAmount;
     [SerializeField]int numberOfBes;
-    public List<PeasantBees> bees = new ();
+    [SerializeField] float collectingNectarRate;
+    public List<PeasantBees> bees = new();
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
@@ -18,7 +20,8 @@ public class FlowerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log( flowerNectarAmount);
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -30,24 +33,37 @@ public class FlowerBehaviour : MonoBehaviour
                 bees.Add(pBee);
             }
         }
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CollectingNectar();
+        }
     }
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnTriggerEnter(Collision collision)
     {
         if(collision.gameObject.tag== "Player")
-        CollectingNectar();
-        //Debug.Log(NectarAmount);
-    }
+        {
+            CollectingNectar();
+        }
+
+    }*/
 
     public void CollectingNectar ()
     {
-        if (NectarAmount >= 0)
+
+        if (flowerNectarAmount > 0)
         {
+            //I want flower nectar to get drained when player is colliding with it
             //yield return new WaitForSecondsRealtime(1);
-            NectarAmount -= 1;
-            Invoke("CollectingNectar", 5);
+            flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
+            //Invoke("CollectingNectar", 5);
         }
+
     }
 }
