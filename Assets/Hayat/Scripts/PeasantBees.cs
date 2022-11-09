@@ -6,7 +6,8 @@ using UnityEngine;
 public class PeasantBees : MonoBehaviour
 {
 
-    [SerializeField] Transform target;
+    [SerializeField] Transform target1;
+    [SerializeField] Transform target2;
     Vector3 direction;
     [SerializeField] float maximumSpeed=10f;
     [SerializeField] float slowingDownDistance;
@@ -15,28 +16,30 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] float steeringSpeed = 2;
     [SerializeField] Rigidbody rb;
     [SerializeField] private float seperationForce;
-
+    [SerializeField]BeeDisatcher beedispatcher;
     [SerializeField]List<PeasantBees> neighbourPeassants = new();
     
     public void SwitchTargets(Transform targetToFollow)
     {
-        this.target = targetToFollow;
+        this.target1 = targetToFollow;
+        this.target2 = targetToFollow;
     }
     void Start()
     {
         rb.useGravity = false;
-
+        beedispatcher = GameObject.Find("beeDisatcher").GetComponent<BeeDisatcher>();
     }
 
 
     void Update()
     {
+
         if (neighbourPeassants.Count > 0)
         {
             Seperate();
             
         }
-        if (target != null)
+        if (target1 != null)
         {
             SeekTarget();
             float ratio  =Arrive();
@@ -57,14 +60,24 @@ public class PeasantBees : MonoBehaviour
 
     public void SeekTarget()
     {
-        direction = (target.transform.position - transform.position).normalized ;
-        rb.velocity += direction * steeringSpeed;
-        Arrive();
+        if (beedispatcher.dispatch == true )
+        {
+            direction = (target2.transform.position - transform.position).normalized;
+            rb.velocity += direction * steeringSpeed;
+            Arrive();
+        }
+        else
+        {
+            direction = (target1.transform.position - transform.position).normalized;
+            rb.velocity += direction * steeringSpeed;
+            Arrive();
+        }
+        
     }
 
     public float Arrive()
     {
-        distance = Vector3.Distance(target.transform.position, transform.position);
+        distance = Vector3.Distance(target1.transform.position, transform.position);
         if (distance > 5)
         {
             return 1;
@@ -77,8 +90,10 @@ public class PeasantBees : MonoBehaviour
         {
             return .5f;
         }
-        return 0;
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maximumSpeed);
+        return 0;
+        
+        
 
     }
 

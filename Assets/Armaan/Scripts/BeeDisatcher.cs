@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Hayat
-{
 
-    class BeeDisatcher : MonoBehaviour
+
+
+    public class BeeDisatcher : MonoBehaviour
     {
-        public List<BeeDisatcher> beesInSwarm = new();
-        bool dispatch;
+        [SerializeField] List<GameObject> beesInSwarm = new();
+        public bool dispatch = false;
 
         private void Update()
         {
             // check if the current flower is not null
             // if true then check if the button id pressed and only then add
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 dispatch = true;
             }
+
+
         }
 
         private void OnTriggerEnter(Collider other)
@@ -27,7 +30,7 @@ namespace Assets.Hayat
            /// check if the flower can hold more bees         
            /// set current flower to be th
            /// add bee to flower
-           if (other.CompareTag("Flowers"))
+           if (other.CompareTag("Flowers")&& Input.GetKeyDown(KeyCode.Space))
             {
                 if (dispatch == true)
                 {
@@ -35,8 +38,7 @@ namespace Assets.Hayat
                     if (currentflower.bees.Count == 0)
                     {
                         currentflower.bees.Clear();
-                    }
-                    
+                    } 
 
                 }
             }
@@ -52,4 +54,3 @@ namespace Assets.Hayat
             /// 
         }
     }
-}

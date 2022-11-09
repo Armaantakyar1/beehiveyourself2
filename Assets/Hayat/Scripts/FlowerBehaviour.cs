@@ -28,7 +28,7 @@ public class FlowerBehaviour : MonoBehaviour
         if (other.CompareTag("PeassantBees"))
         {
             if(other.GetComponent<PeasantBees>() != null) {
-                //bees.Add(other.gameObject);
+                
                 PeasantBees pBee = other.GetComponent<PeasantBees>();
                 bees.Add(pBee);
             }
