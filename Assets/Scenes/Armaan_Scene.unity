@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 794707537}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
+      value: 
+      objectReference: {fileID: 794707537}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (3)
@@ -301,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beesInSwarm: []
+  dispatch: 0
 --- !u!1001 &872871820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1169184601898721536, guid: 29847616dc1056245921dd4b9e4218a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.21
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 1169184601898721536, guid: 29847616dc1056245921dd4b9e4218a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -530,6 +535,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 794707537}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
+      value: 
+      objectReference: {fileID: 794707537}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (2)
@@ -591,6 +600,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 794707537}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
+      value: 
+      objectReference: {fileID: 794707537}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (4)
@@ -650,6 +663,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
+      value: 
+      objectReference: {fileID: 794707537}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
       value: 
       objectReference: {fileID: 794707537}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
