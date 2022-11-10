@@ -7,7 +7,7 @@ public class FlowerBehaviour : MonoBehaviour
 {
     public float flowerNectarAmount;
     [SerializeField]int numberOfBes;
-    [SerializeField] float collectingNectarRate;
+    public float collectingNectarRate;
     public List<PeasantBees> bees = new();
 
 
@@ -35,11 +35,11 @@ public class FlowerBehaviour : MonoBehaviour
         }
 
     }
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            CollectingNectar();
+            FlowerLosingNectar();
         }
     }
 
@@ -54,7 +54,7 @@ public class FlowerBehaviour : MonoBehaviour
 
     }*/
 
-    public void CollectingNectar ()
+    public void FlowerLosingNectar ()
     {
 
         if (flowerNectarAmount > 0)

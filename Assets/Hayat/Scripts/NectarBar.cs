@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class NectarBar : MonoBehaviour
 {
-    [SerializeField] int beeNectarAmount;
-    FlowerBehaviour FlowersScript;
+    [SerializeField] float beeNectarAmount;
+    [SerializeField] FlowerBehaviour flowersNectar;
     //pinkFlowers FlowerNectar;
      void Start()
     {
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        /*if (collision. gameObject.tag =="Flowers")
-        {
-            if (FlowerNectar.NectarAmount>=0)
-            {
-                NectarBar += 1;
-            }
 
-            Debug.Log(NectarBar);
-        }*/
+    }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Flowers"))
+        {
+            if (flowersNectar.flowerNectarAmount > 0)
+            {
+                BeesGainingNectar();
+            }
+        }
+    }
+
+    void BeesGainingNectar()
+    {
+        
+            beeNectarAmount += 1 * flowersNectar.collectingNectarRate * Time.deltaTime;
+        
     }
 
 }

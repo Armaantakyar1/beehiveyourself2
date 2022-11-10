@@ -8,6 +8,7 @@ public class Bee : MonoBehaviour
     [SerializeField] GameObject beeHive;
     [SerializeField] Timers timerScript;
 
+
     private void Start()
     {
     }
@@ -19,6 +20,7 @@ public class Bee : MonoBehaviour
             Debug.Log("bees are in the beehive");
         }
     }
+
     private void Update()
     {
         
