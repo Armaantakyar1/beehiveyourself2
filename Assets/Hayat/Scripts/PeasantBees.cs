@@ -27,7 +27,7 @@ public class PeasantBees : MonoBehaviour
     void Start()
     {
         rb.useGravity = false;
-        beedispatcher = GameObject.Find("beeDisatcher").GetComponent<BeeDisatcher>();
+        
     }
 
 

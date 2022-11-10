@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Targets : MonoBehaviour
 {
-    public GameObject LeaderBee;
-    public GameObject Flowers;
+    [SerializeField] GameObject LeaderBee;
+    [SerializeField] List<GameObject> Flowers = new();
     // Start is called before the first frame update
     void Start()
     {
