@@ -7,8 +7,10 @@ public class FlowerBehaviour : MonoBehaviour
 {
     public float flowerNectarAmount;
     [SerializeField]int numberOfBes;
+    [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> bees = new();
+    bool nectarIsAvailable;
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
@@ -21,6 +23,8 @@ public class FlowerBehaviour : MonoBehaviour
     void Update()
     {
         Debug.Log( flowerNectarAmount);
+        nectarAmountCheck();
+        
 
     }
     private void OnTriggerEnter(Collider other)
@@ -40,30 +44,36 @@ public class FlowerBehaviour : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             FlowerLosingNectar();
+
+            if (nectarIsAvailable==true)
+            {
+                beeNectarScript.BeesGainingNectar();
+            }
         }
     }
 
 
-
-    /*private void OnTriggerEnter(Collision collision)
-    {
-        if(collision.gameObject.tag== "Player")
-        {
-            CollectingNectar();
-        }
-
-    }*/
-
     public void FlowerLosingNectar ()
     {
 
-        if (flowerNectarAmount > 0)
+        if (nectarIsAvailable==true)
         {
             //I want flower nectar to get drained when player is colliding with it
-            //yield return new WaitForSecondsRealtime(1);
             flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
-            //Invoke("CollectingNectar", 5);
+            
         }
 
+    }
+
+    void nectarAmountCheck()
+    {
+        if (flowerNectarAmount <= 0)
+        {
+            nectarIsAvailable = false;
+        }
+        if (flowerNectarAmount > 0)
+        {
+            nectarIsAvailable = true;
+        }
     }
 }

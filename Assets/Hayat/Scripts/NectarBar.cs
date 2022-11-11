@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class NectarBar : MonoBehaviour
 {
-    [SerializeField] float beeNectarAmount;
+    public float beeNectarAmount;
     [SerializeField] FlowerBehaviour flowersNectar;
-    //pinkFlowers FlowerNectar;
+    //[SerializeField] GameObject flowerPrefab;
+    //I need to figure out how to get the bee to read the information of the flower its colliding with
      void Start()
+     {
+        
+     }
+    private void Update()
     {
-
-    }
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Flowers"))
-        {
-            if (flowersNectar.flowerNectarAmount > 0)
-            {
-                BeesGainingNectar();
-            }
-        }
     }
 
-    void BeesGainingNectar()
+
+    public void BeesGainingNectar()
     {
         
             beeNectarAmount += 1 * flowersNectar.collectingNectarRate * Time.deltaTime;
         
+        Debug.Log("bee gaining nectar");
     }
 
 }

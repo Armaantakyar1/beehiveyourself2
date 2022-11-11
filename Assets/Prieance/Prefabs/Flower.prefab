@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1169184601898721536}
   - component: {fileID: 2132842100980421638}
+  - component: {fileID: 373986011158565984}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Flowers
@@ -41,11 +42,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2896914201573185300}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &373986011158565984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896914201573185300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee7380f91b503048bf9c5e7b599ffd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerNectarAmount: 0
+  numberOfBes: 0
+  beeNectarScript: {fileID: 0}
+  collectingNectarRate: 0.3
+  bees: []
 --- !u!1 &7588902848336429020
 GameObject:
   m_ObjectHideFlags: 0
