@@ -9,8 +9,15 @@ using UnityEngine;
     {
         [SerializeField] List<GameObject> beesInSwarm = new();
         public bool dispatch = false;
+        FlowerBehaviour currentflower;
+        
+        
+    private void Start()
+    {
+        currentflower = GetComponent<FlowerBehaviour>();
+    }
 
-        private void Update()
+    private void Update()
         {
             // check if the current flower is not null
             // if true then check if the button id pressed and only then add
@@ -30,21 +37,27 @@ using UnityEngine;
            /// check if the flower can hold more bees         
            /// set current flower to be th
            /// add bee to flower
-           if (other.CompareTag("Flowers")&& Input.GetKeyDown(KeyCode.Space))
+           if (other.CompareTag("Flowers"))
             {
+               
                 if (dispatch == true)
                 {
-                    FlowerBehaviour currentflower = other.GetComponent<FlowerBehaviour>();
-                    if (currentflower.bees.Count == 0)
+                    
+                    if (currentflower.beesInFlowers.Count == 0)
                     {
-                        currentflower.bees.Clear();
-                    } 
-
+                        currentflower.beesInFlowers.Clear();
+                    }
+                    dispatch = false;
                 }
             }
 
-
         }
+        
+        
+
+
+
+
 
         protected void AddBeToFlower(FlowerBehaviour selected)
         {

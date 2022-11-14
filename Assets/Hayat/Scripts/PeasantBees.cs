@@ -7,7 +7,7 @@ public class PeasantBees : MonoBehaviour
 {
 
     [SerializeField] Transform target1;
-    [SerializeField] Transform target2;
+    public Transform flowerTarget ;
     Vector3 direction;
     [SerializeField] float maximumSpeed=10f;
     [SerializeField] float slowingDownDistance;
@@ -22,7 +22,7 @@ public class PeasantBees : MonoBehaviour
     public void SwitchTargets(Transform targetToFollow)
     {
         this.target1 = targetToFollow;
-        this.target2 = targetToFollow;
+        this.flowerTarget = targetToFollow;
     }
     void Start()
     {
@@ -45,7 +45,7 @@ public class PeasantBees : MonoBehaviour
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
-
+        this.transform.forward = rb.velocity;
     }
 
     private void Seperate()
@@ -62,7 +62,7 @@ public class PeasantBees : MonoBehaviour
     {
         if (beedispatcher.dispatch == true )
         {
-            direction = (target2.transform.position - transform.position).normalized;
+            direction = (flowerTarget.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
             Arrive();
         }

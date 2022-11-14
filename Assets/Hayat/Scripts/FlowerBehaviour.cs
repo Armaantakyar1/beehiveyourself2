@@ -7,13 +7,18 @@ using TMPro;
 public class FlowerBehaviour : MonoBehaviour
 {
     public float flowerNectarAmount;
+    [SerializeField] Transform flowerPosition;
     [SerializeField]int numberOfBes;
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
-    public List<PeasantBees> bees = new();
+    public List<PeasantBees> beesInFlowers = new();
     bool nectarIsAvailable;
+
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
+
+    PeasantBees bees;
+
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -27,15 +32,18 @@ public class FlowerBehaviour : MonoBehaviour
         Debug.Log( flowerNectarAmount);
         nectarAmountCheck();
 
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PeassantBees"))
         {
             if(other.GetComponent<PeasantBees>() != null) {
-                
+
+                bees.flowerTarget = flowerPosition;
                 PeasantBees pBee = other.GetComponent<PeasantBees>();
-                bees.Add(pBee);
+                beesInFlowers.Add(pBee);
+
             }
         }
 
