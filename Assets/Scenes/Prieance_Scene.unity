@@ -929,6 +929,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+--- !u!114 &716039757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  m_PrefabInstance: {fileID: 716039756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee7380f91b503048bf9c5e7b599ffd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &764491547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1021,6 +1032,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beesInSwarm: []
   dispatch: 0
+--- !u!114 &764491552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412187949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35ed299acfe2d8448df76430486939f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeHive: {fileID: 1634145932}
+  timerScript: {fileID: 0}
+--- !u!114 &764491553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412187949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfdbd1fd2bd0624e8eeddd4a197cb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeNectarAmount: 0
+  flowersNectar: {fileID: 716039757}
+  nectarAmountText: {fileID: 0}
 --- !u!1 &769555354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213c4ca014a187746a9d284d27f41570, type: 3}
+--- !u!1 &1634145932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4833428610681537813, guid: 213c4ca014a187746a9d284d27f41570, type: 3}
+  m_PrefabInstance: {fileID: 1634145931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1680165765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
