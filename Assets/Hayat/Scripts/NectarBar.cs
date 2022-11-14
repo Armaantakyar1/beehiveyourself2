@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NectarBar : MonoBehaviour
 {
     public float beeNectarAmount;
     [SerializeField] FlowerBehaviour flowersNectar;
-    //[SerializeField] GameObject flowerPrefab;
-    //I need to figure out how to get the bee to read the information of the flower its colliding with
+    [SerializeField] TextMeshProUGUI nectarAmountText;
      void Start()
      {
         
      }
     private void Update()
     {
+        nectarAmountText.text = beeNectarAmount.ToString("Nectar Amount: 0");
     }
 
 

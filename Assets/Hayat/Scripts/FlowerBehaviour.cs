@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FlowerBehaviour : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class FlowerBehaviour : MonoBehaviour
     public float collectingNectarRate;
     public List<PeasantBees> bees = new();
     bool nectarIsAvailable;
-
+    [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
+    [SerializeField] GameObject flowerNectarCanvas;
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -24,7 +26,6 @@ public class FlowerBehaviour : MonoBehaviour
     {
         Debug.Log( flowerNectarAmount);
         nectarAmountCheck();
-        
 
     }
     private void OnTriggerEnter(Collider other)
@@ -49,6 +50,19 @@ public class FlowerBehaviour : MonoBehaviour
             {
                 beeNectarScript.BeesGainingNectar();
             }
+
+            flowerNectarCanvas.SetActive(true);
+            nectarLeftInTheFlowerText.text = this.flowerNectarAmount.ToString("0");
+
+
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            flowerNectarCanvas.SetActive(false);
+
         }
     }
 
