@@ -15,7 +15,6 @@ public class FlowerBehaviour : MonoBehaviour
     bool nectarIsAvailable;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
-    PeasantBees bees;
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
@@ -28,20 +27,23 @@ public class FlowerBehaviour : MonoBehaviour
     void Update()
     {
         Debug.Log( flowerNectarAmount);
-        nectarAmountCheck();
+        nectarAmountCheck(); 
 
 
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (beesInFlowers.Count > 3)
+        {
+            return;
+        }
         if (other.CompareTag("PeassantBees"))
         {
-            if(other.GetComponent<PeasantBees>() != null) {
-                
-                bees.flowerTarget = this.flowerPosition;
-                PeasantBees pBee = other.GetComponent<PeasantBees>();
-                beesInFlowers.Add(pBee);
-
+            var bee = other.GetComponent<PeasantBees>();
+            
+            if (bee != null) {
+                bee.flowerTarget = this.flowerPosition;
+                beesInFlowers.Add(bee);
             }
         }
 

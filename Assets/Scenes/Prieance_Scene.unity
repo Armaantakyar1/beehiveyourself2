@@ -273,6 +273,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -317,6 +325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -337,6 +349,14 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee
@@ -525,8 +545,105 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &332906919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2094950443}
+    m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -77.64957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.138639
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 764491548}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
+      value: 
+      objectReference: {fileID: 764491548}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target2
+      value: 
+      objectReference: {fileID: 1029997000}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: flowerTarget
+      value: 
+      objectReference: {fileID: 388049720}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: beedispatcher
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Name
+      value: Peasant Bee (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6094409324b855c46978b9aaec481954, type: 3}
 --- !u!1 &374023344
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +1030,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &502041041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+  m_PrefabInstance: {fileID: 1335317889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &532856512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 346751669624099613, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 346751669624099614, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1198,6 +1320,22 @@ MonoBehaviour:
   beeNectarAmount: 0
   flowersNectar: {fileID: 716039757}
   nectarAmountText: {fileID: 1292349904}
+--- !u!54 &764491556
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412187949}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &769555354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1379,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1285,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -1305,6 +1455,14 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (3)
@@ -1400,6 +1558,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1444,6 +1610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -1464,6 +1634,14 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (4)
@@ -1808,6 +1986,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1864,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -1884,6 +2074,14 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (2)
@@ -2044,6 +2242,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2088,6 +2294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -2108,9 +2318,114 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6094409324b855c46978b9aaec481954, type: 3}
+--- !u!1001 &1335317889
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2094950443}
+    m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -77.64957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.138639
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 764491548}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target1
+      value: 
+      objectReference: {fileID: 764491548}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: target2
+      value: 
+      objectReference: {fileID: 1029997000}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: flowerTarget
+      value: 
+      objectReference: {fileID: 1082528686}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: beedispatcher
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Name
+      value: Peasant Bee (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6094409324b855c46978b9aaec481954, type: 3}
@@ -2315,7 +2630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1440667957
 PrefabInstance:
@@ -2438,6 +2753,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443346, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e44c48ced86c9f14b91b6e82cb8ac57e, type: 2}
     - target: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2482,6 +2805,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443350, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: target
       value: 
@@ -2502,6 +2829,14 @@ PrefabInstance:
       propertyPath: beedispatcher
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: steeringSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: seperationForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Name
       value: Peasant Bee (1)
@@ -2605,8 +2940,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1555978191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
+  m_PrefabInstance: {fileID: 332906919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1593017693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
@@ -2970,6 +3310,8 @@ Transform:
   - {fileID: 1384030808}
   - {fileID: 1680165765}
   - {fileID: 1593017693}
+  - {fileID: 502041041}
+  - {fileID: 1555978191}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
