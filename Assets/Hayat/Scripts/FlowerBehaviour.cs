@@ -7,13 +7,13 @@ using TMPro;
 public class FlowerBehaviour : MonoBehaviour
 {
     public float flowerNectarAmount;
-    [SerializeField] Transform flowerPosition;
+    [SerializeField]Transform flowerPosition;
     [SerializeField]int numberOfBes;
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     bool nectarIsAvailable;
-
+    
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
 
@@ -39,8 +39,8 @@ public class FlowerBehaviour : MonoBehaviour
         if (other.CompareTag("PeassantBees"))
         {
             if(other.GetComponent<PeasantBees>() != null) {
-
-                bees.flowerTarget = flowerPosition;
+                
+                bees.flowerTarget = this.flowerPosition;
                 PeasantBees pBee = other.GetComponent<PeasantBees>();
                 beesInFlowers.Add(pBee);
 
