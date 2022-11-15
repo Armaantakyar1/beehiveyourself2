@@ -42,7 +42,15 @@ using UnityEngine;
                
                 if (dispatch == true)
                 {
-                    
+
+                   for(int i =1; i<beesInSwarm.Count;i++)
+                    {
+                        foreach(GameObject bee in beesInSwarm)
+                        {
+                            bee.transform.position = beesInSwarm[i].transform.position;
+                        }
+                    }
+              
                     if (currentflower.beesInFlowers.Count == 0)
                     {
                         currentflower.beesInFlowers.Clear();

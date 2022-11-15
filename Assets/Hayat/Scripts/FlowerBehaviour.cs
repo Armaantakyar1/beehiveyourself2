@@ -13,10 +13,8 @@ public class FlowerBehaviour : MonoBehaviour
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     bool nectarIsAvailable;
-    
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
-
     PeasantBees bees;
 
 
