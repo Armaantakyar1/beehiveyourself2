@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowerNectarAmount: 0
-  flowerPosition: {fileID: 0}
+  flowerPosition: {fileID: 1169184601898721536}
   numberOfBes: 0
   beeNectarScript: {fileID: 0}
   collectingNectarRate: 0.3
