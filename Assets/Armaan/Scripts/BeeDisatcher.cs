@@ -9,7 +9,7 @@ using UnityEngine;
     {
         [SerializeField] List<GameObject> beesInSwarm = new();
         public bool dispatch = false;
-        FlowerBehaviour currentflower;
+        [SerializeField] FlowerBehaviour currentflower;
         
         
     private void Start()

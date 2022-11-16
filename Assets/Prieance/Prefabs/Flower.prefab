@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.4555163, y: 3.356468, z: 4.0950046}
+  m_Center: {x: 0.24336778, y: 1.1782324, z: 0.03712845}
 --- !u!114 &373986011158565984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,10 +60,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowerNectarAmount: 0
+  flowerPosition: {fileID: 0}
   numberOfBes: 0
   beeNectarScript: {fileID: 0}
   collectingNectarRate: 0.3
-  bees: []
+  beesInFlowers: []
+  nectarLeftInTheFlowerText: {fileID: 0}
+  flowerNectarCanvas: {fileID: 0}
 --- !u!1 &7588902848336429020
 GameObject:
   m_ObjectHideFlags: 0

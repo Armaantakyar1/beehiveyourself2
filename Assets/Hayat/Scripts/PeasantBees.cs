@@ -60,7 +60,7 @@ public class PeasantBees : MonoBehaviour
 
     public void SeekTarget()
     {
-        if (beedispatcher.dispatch == true )
+        if (beedispatcher.dispatch == true && flowerTarget != null )
         {
             direction = (flowerTarget.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
