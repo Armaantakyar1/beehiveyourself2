@@ -17,8 +17,13 @@ public class movement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
         Vector3 direction = new Vector3(horizontal, 0, vertical);
         Vector3 velocity = direction * speed;      
         controller.Move(velocity * Time.deltaTime);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 }

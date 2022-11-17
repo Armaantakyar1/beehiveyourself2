@@ -126,6 +126,9 @@ public class PeasantBees : MonoBehaviour
                 neighbourPeassants.Remove(neighbour);
             }
         }
-
+        if (other.CompareTag("Flowers"))
+        {
+            flowerTarget = null;
+        }
     }
 }
