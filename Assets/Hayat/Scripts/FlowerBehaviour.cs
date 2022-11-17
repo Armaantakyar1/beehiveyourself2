@@ -15,12 +15,12 @@ public class FlowerBehaviour : MonoBehaviour
     bool nectarIsAvailable;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
-
+    [SerializeField] BeeDisatcher beeDispatcherScript;
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
     {
-        
+        beeDispatcherScript = GameObject.Find("player").GetComponent<BeeDisatcher>();
     }
 
     // Update is called once per frame
@@ -45,12 +45,15 @@ public class FlowerBehaviour : MonoBehaviour
                 bee.flowerTarget = this.flowerPosition;
                 beesInFlowers.Add(bee);
             }
+
+
+
         }
 
     }
     public void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PeassantBees") && beeDispatcherScript.dispatch==true)
         {
             FlowerLosingNectar();
 
@@ -67,7 +70,7 @@ public class FlowerBehaviour : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PeassantBees"))
         {
             flowerNectarCanvas.SetActive(false);
 

@@ -404,6 +404,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728818648}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -730,6 +734,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728818648}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -823,6 +831,10 @@ PrefabInstance:
       propertyPath: flowerNectarCanvas
       value: 
       objectReference: {fileID: 1728818648}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
@@ -1125,6 +1137,10 @@ PrefabInstance:
       propertyPath: flowerNectarCanvas
       value: 
       objectReference: {fileID: 1728818648}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
@@ -1513,6 +1529,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728818648}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -1692,6 +1712,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728818648}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -1813,6 +1837,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728818648}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -1928,6 +1956,10 @@ PrefabInstance:
       propertyPath: flowerNectarCanvas
       value: 
       objectReference: {fileID: 1728818648}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: beeDispatcherScript
+      value: 
+      objectReference: {fileID: 764491551}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
@@ -2225,11 +2257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 610652921553122544, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 674
+      value: -638
       objectReference: {fileID: 0}
     - target: {fileID: 610652921553122544, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 154
+      value: 395
       objectReference: {fileID: 0}
     - target: {fileID: 610652922243447666, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
       propertyPath: m_LocalScale.x
@@ -2237,11 +2269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 610652922243447666, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -484
+      value: -816
       objectReference: {fileID: 0}
     - target: {fileID: 610652922243447666, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 214
+      value: 332
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
