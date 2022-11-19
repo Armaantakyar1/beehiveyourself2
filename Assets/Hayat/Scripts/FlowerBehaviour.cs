@@ -16,6 +16,8 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
+    [SerializeField] GameObject LeaderBee;
+
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -65,6 +67,16 @@ public class FlowerBehaviour : MonoBehaviour
             flowerNectarCanvas.SetActive(true);
             nectarLeftInTheFlowerText.text = this.flowerNectarAmount.ToString("0");
 
+            if(Input.GetKey(KeyCode.Space) && beeDispatcherScript.dispatch == true)
+            {
+                var bee = other.GetComponent<PeasantBees>();
+                if (bee != null)
+                {
+                    bee.beeTarget = LeaderBee.transform;
+                    beesInFlowers.Remove(bee);
+                    beeDispatcherScript.dispatch = false;
+                }
+            }
 
         }
     }

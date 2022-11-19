@@ -6,7 +6,7 @@ using UnityEngine;
 public class PeasantBees : MonoBehaviour
 {
 
-    [SerializeField] Transform target1;
+    public Transform beeTarget;
     public Transform flowerTarget ;
     Vector3 direction;
     [SerializeField] float maximumSpeed=10f;
@@ -21,7 +21,7 @@ public class PeasantBees : MonoBehaviour
     
     public void SwitchTargets(Transform targetToFollow)
     {
-        this.target1 = targetToFollow;
+        this.beeTarget = targetToFollow;
         this.flowerTarget = targetToFollow;
     }
     void Start()
@@ -39,7 +39,7 @@ public class PeasantBees : MonoBehaviour
             Seperate();
             
         }
-        if (target1 != null)
+        if (beeTarget != null)
         {
             SeekTarget();
             float ratio  =Arrive();
@@ -68,7 +68,7 @@ public class PeasantBees : MonoBehaviour
         }
         else
         {
-            direction = (target1.transform.position - transform.position).normalized;
+            direction = (beeTarget.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
             Arrive();
         }
@@ -77,7 +77,7 @@ public class PeasantBees : MonoBehaviour
 
     public float Arrive()
     {
-        distance = Vector3.Distance(target1.transform.position, transform.position);
+        distance = Vector3.Distance(beeTarget.transform.position, transform.position);
         if (distance > 5)
         {
             return 1;
