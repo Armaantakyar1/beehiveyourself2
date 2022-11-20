@@ -13,6 +13,8 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] float slowingDownDistance;
     [SerializeField] float stopDistance;
     [SerializeField] float distance;
+    [SerializeField] float maximumDistanceFromLeader;
+    [SerializeField] float catchingUpSpeed;
     [SerializeField] float steeringSpeed = 2;
     [SerializeField] Rigidbody rb;
     [SerializeField] private float seperationForce;
@@ -71,6 +73,11 @@ public class PeasantBees : MonoBehaviour
             direction = (beeTarget.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
             Arrive();
+
+            if (distance > maximumDistanceFromLeader)
+            {
+                this.rb.velocity += direction * steeringSpeed * catchingUpSpeed;
+        }
         }
         
     }
