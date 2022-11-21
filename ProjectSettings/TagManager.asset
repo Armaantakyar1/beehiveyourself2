@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Obstacle
   - Peasant
+  - PeassantBees
+  - Movement points
   layers:
   - Default
   - TransparentFX
