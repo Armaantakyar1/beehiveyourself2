@@ -8,6 +8,7 @@ public class PeasantBees : MonoBehaviour
 
     public Transform beeTarget;
     public Transform flowerTarget ;
+    public Transform obstacle;
     Vector3 direction;
     [SerializeField] float maximumSpeed=10f;
     [SerializeField] float slowingDownDistance;
@@ -82,6 +83,12 @@ public class PeasantBees : MonoBehaviour
         
     }
 
+    public void seekobstacle()
+    {
+        direction = (obstacle.transform.position - transform.position).normalized;
+        rb.velocity += direction * steeringSpeed;
+    }
+
     public float Arrive()
     {
         distance = Vector3.Distance(beeTarget.transform.position, transform.position);
@@ -121,7 +128,7 @@ public class PeasantBees : MonoBehaviour
                 neighbourPeassants.Add(neighbour);
             }
         }
-        if (other.CompareTag("obstacle"))
+        if (other.CompareTag("Obstacle"))
         {
             Debug.Log("human");
         }

@@ -61,12 +61,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerNectarAmount: 0
   flowerPosition: {fileID: 1169184601898721536}
+  flower: {fileID: 2896914201573185300}
   numberOfBes: 0
   beeNectarScript: {fileID: 0}
   collectingNectarRate: 0.3
   beesInFlowers: []
+  nectarIsAvailable: 0
   nectarLeftInTheFlowerText: {fileID: 0}
   flowerNectarCanvas: {fileID: 0}
+  beeDispatcherScript: {fileID: 0}
+  LeaderBee: {fileID: 0}
 --- !u!1 &7588902848336429020
 GameObject:
   m_ObjectHideFlags: 0

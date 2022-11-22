@@ -5606,6 +5606,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1029997000}
     m_Modifications:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: flower
+      value: 
+      objectReference: {fileID: 1071816156}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: LeaderBee
       value: 
       objectReference: {fileID: 412187949}
@@ -6094,6 +6098,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
   m_PrefabInstance: {fileID: 611624505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1071816156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2896914201573185300, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  m_PrefabInstance: {fileID: 1031117207}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1082528686 stripped
 Transform:
