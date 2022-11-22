@@ -240,16 +240,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710cdad421fb6f44da5ea89fca573d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target1: {fileID: 0}
+  beeTarget: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
   flowerTarget: {fileID: 0}
+  obstacle: {fileID: 0}
   maximumSpeed: 5
   slowingDownDistance: 4
   stopDistance: 2
   distance: 0
+  maximumDistanceFromLeader: 0
+  catchingUpSpeed: 0
   steeringSpeed: 0.3
   rb: {fileID: 7254795992385443345}
   seperationForce: 0.1
-  beedispatcher: {fileID: 0}
+  beedispatcher: {fileID: 6220530494042911648, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
   neighbourPeassants: []
 --- !u!135 &7254795992385443350
 SphereCollider:

@@ -3841,6 +3841,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 764491551}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: collectingNectarRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -5633,6 +5637,10 @@ PrefabInstance:
       propertyPath: beeDispatcherScript
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: collectingNectarRate
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
