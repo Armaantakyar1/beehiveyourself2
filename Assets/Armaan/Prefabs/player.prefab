@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35ed299acfe2d8448df76430486939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beeHive: {fileID: 0}
-  timerScript: {fileID: 0}
+  beeHive: {fileID: 4833428610681537813, guid: 213c4ca014a187746a9d284d27f41570, type: 3}
+  timerScript: {fileID: 610652921308652557, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
 --- !u!114 &8632935616802289160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beeNectarAmount: 0
-  flowersNectar: {fileID: 0}
+  flowersNectar: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
   nectarAmountText: {fileID: 0}
 --- !u!1 &346751669624099613
 GameObject:
