@@ -4179,7 +4179,6 @@ MonoBehaviour:
   - {fileID: 1335317890}
   - {fileID: 332906920}
   dispatch: 0
-  currentflower: {fileID: 716039757}
 --- !u!114 &764491552
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -77,7 +77,7 @@ public class PeasantBees : MonoBehaviour
             if (distance > maximumDistanceFromLeader)
             {
                 this.rb.velocity += direction * steeringSpeed * catchingUpSpeed;
-        }
+            }
         }
         
     }
@@ -121,6 +121,10 @@ public class PeasantBees : MonoBehaviour
                 neighbourPeassants.Add(neighbour);
             }
         }
+        if (other.CompareTag("obstacle"))
+        {
+            Debug.Log("human");
+        }
         //add to the list
     }
     private void OnTriggerExit(Collider other)
@@ -135,7 +139,7 @@ public class PeasantBees : MonoBehaviour
         }
         if (other.CompareTag("Flowers"))
         {
-            flowerTarget = null;
+            
         }
     }
 }

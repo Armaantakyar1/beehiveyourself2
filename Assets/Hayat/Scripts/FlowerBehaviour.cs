@@ -8,6 +8,7 @@ public class FlowerBehaviour : MonoBehaviour
 {
     public float flowerNectarAmount;
     [SerializeField]Transform flowerPosition;
+    [SerializeField] GameObject flower;
     [SerializeField]int numberOfBes;
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
@@ -48,8 +49,6 @@ public class FlowerBehaviour : MonoBehaviour
                 beesInFlowers.Add(bee);
             }
 
-
-
         }
 
     }
@@ -66,17 +65,11 @@ public class FlowerBehaviour : MonoBehaviour
 
             flowerNectarCanvas.SetActive(true);
             nectarLeftInTheFlowerText.text = this.flowerNectarAmount.ToString("0");
-
-            if(Input.GetKey(KeyCode.Space) && beeDispatcherScript.dispatch == true)
+            if (Input.GetKeyDown(KeyCode.E) && nectarIsAvailable == false)
             {
-                var bee = other.GetComponent<PeasantBees>();
-                if (bee != null)
-                {
-                    bee.beeTarget = LeaderBee.transform;
-                    beesInFlowers.Remove(bee);
-                    beeDispatcherScript.dispatch = false;
-                }
+                Destroy(flower);
             }
+
 
         }
     }
