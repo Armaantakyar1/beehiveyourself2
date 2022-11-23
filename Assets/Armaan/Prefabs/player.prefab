@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 346751669391269134}
   - component: {fileID: 346751669391269135}
   - component: {fileID: 8495024209646690285}
+  - component: {fileID: 6220530494042911648}
+  - component: {fileID: 2491251236739834677}
+  - component: {fileID: 8632935616802289160}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -65,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5ac5e3826d0564f9540937a459038d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!65 &8495024209646690285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,6 +82,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6279349, y: 4.220364, z: 1}
   m_Center: {x: 0.31396097, y: -0.9993416, z: 0}
+--- !u!114 &6220530494042911648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346751669391269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a6880c05e7c564eb19c2183f1630c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beesInSwarm: []
+  dispatch: 0
+--- !u!114 &2491251236739834677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346751669391269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35ed299acfe2d8448df76430486939f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeHive: {fileID: 4833428610681537813, guid: 213c4ca014a187746a9d284d27f41570, type: 3}
+  timerScript: {fileID: 610652921308652557, guid: 89e173727c89d4747aa2dbcc26646ca0, type: 3}
+--- !u!114 &8632935616802289160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346751669391269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfdbd1fd2bd0624e8eeddd4a197cb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeNectarAmount: 0
+  flowersNectar: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  nectarAmountText: {fileID: 0}
 --- !u!1 &346751669624099613
 GameObject:
   m_ObjectHideFlags: 0

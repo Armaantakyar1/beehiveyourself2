@@ -249,12 +249,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1029997000}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: distance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: beeTarget
       value: 
       objectReference: {fileID: 764491548}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: flowerTarget
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: maximumSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: stopDistance
@@ -274,11 +282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: seperationForce
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: slowingDownDistance
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: maximumDistanceFromLeader
@@ -3833,6 +3841,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 764491551}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: collectingNectarRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
       objectReference: {fileID: 1728818649}
@@ -4171,7 +4183,6 @@ MonoBehaviour:
   - {fileID: 1335317890}
   - {fileID: 332906920}
   dispatch: 0
-  currentflower: {fileID: 716039757}
 --- !u!114 &764491552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5599,6 +5610,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1029997000}
     m_Modifications:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: flower
+      value: 
+      objectReference: {fileID: 1071816156}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: LeaderBee
       value: 
       objectReference: {fileID: 412187949}
@@ -5622,6 +5637,10 @@ PrefabInstance:
       propertyPath: beeDispatcherScript
       value: 
       objectReference: {fileID: 764491551}
+    - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+      propertyPath: collectingNectarRate
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: nectarLeftInTheFlowerText
       value: 
@@ -6087,6 +6106,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
   m_PrefabInstance: {fileID: 611624505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1071816156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2896914201573185300, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  m_PrefabInstance: {fileID: 1031117207}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1082528686 stripped
 Transform:
