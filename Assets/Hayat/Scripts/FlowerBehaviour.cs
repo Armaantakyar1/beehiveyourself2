@@ -18,7 +18,8 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
     [SerializeField] GameObject LeaderBee;
-
+    
+    
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()

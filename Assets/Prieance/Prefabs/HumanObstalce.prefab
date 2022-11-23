@@ -108,6 +108,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2132898923208000249}
   - component: {fileID: 9150919041887713127}
+  - component: {fileID: 4389545698617422004}
+  - component: {fileID: 6910213797343738026}
   m_Layer: 0
   m_Name: HumanObstalce
   m_TagString: Obstacle
@@ -145,3 +147,33 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4389545698617422004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954879871397783330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d1a600c8f56c468c37979fef669ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seekingbees: []
+  obstacleposition: {fileID: 2132898923208000249}
+  agressionAmount: 0
+  maxAgression: 0
+  peasants: {fileID: 387585503403809115, guid: ec3d7b20177834e4e8c6a97250e98f34, type: 3}
+--- !u!135 &6910213797343738026
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954879871397783330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.0017974
+  m_Center: {x: 0, y: 0, z: 0.23526168}

@@ -4155,7 +4155,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 74d47a31887f08141bf99cebc7b76485, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 2491251236739834677, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
+      propertyPath: beeHive
+      value: 
+      objectReference: {fileID: 1634145932}
+    m_RemovedComponents:
+    - {fileID: 6220530494042911648, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
+    - {fileID: 2491251236739834677, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
+    - {fileID: 8632935616802289160, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
 --- !u!4 &764491548 stripped
 Transform:
