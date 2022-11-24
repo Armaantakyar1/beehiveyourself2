@@ -91,7 +91,7 @@ public class FlowerBehaviour : MonoBehaviour
         if (nectarIsAvailable==true)
         {
             //I want flower nectar to get drained when player is colliding with it
-            flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
+            this.flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
             
         }
 
