@@ -47,7 +47,7 @@ public class PeasantBees : MonoBehaviour
         if (beeTarget != null)
         {
             SeekTarget();
-            seekobstacle();
+            //seekobstacle();
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
