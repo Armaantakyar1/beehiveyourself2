@@ -7,7 +7,10 @@ public class humanAgression : MonoBehaviour
 
     public List<PeasantBees> seekingbees = new ();
     [SerializeField] Transform obstacleposition;
-    // Start is called before the first frame update
+    [SerializeField] float agressionAmount;
+    [SerializeField] float maxAgression;
+    [SerializeField]PeasantBees peasants;
+     // Start is called before the first frame update
     void Start()
     {
         
@@ -16,7 +19,10 @@ public class humanAgression : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (agressionAmount >= maxAgression)
+        {
+            peasants.pissedOff = true;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

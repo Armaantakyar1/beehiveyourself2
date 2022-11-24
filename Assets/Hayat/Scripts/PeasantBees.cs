@@ -21,11 +21,13 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] private float seperationForce;
     [SerializeField]BeeDisatcher beedispatcher;
     [SerializeField]List<PeasantBees> neighbourPeassants = new();
-    
+    public bool pissedOff = false;
+
     public void SwitchTargets(Transform targetToFollow)
     {
         this.beeTarget = targetToFollow;
         this.flowerTarget = targetToFollow;
+        this.obstacle = targetToFollow;
     }
     void Start()
     {
@@ -45,6 +47,7 @@ public class PeasantBees : MonoBehaviour
         if (beeTarget != null)
         {
             SeekTarget();
+            seekobstacle();
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
@@ -85,8 +88,18 @@ public class PeasantBees : MonoBehaviour
 
     public void seekobstacle()
     {
-        direction = (obstacle.transform.position - transform.position).normalized;
-        rb.velocity += direction * steeringSpeed;
+        if(obstacle != null && pissedOff == true)
+        {
+            direction = (obstacle.transform.position - transform.position).normalized;
+            rb.velocity += direction * steeringSpeed;
+        }
+        else
+        {
+            direction = (beeTarget.transform.position - transform.position).normalized;
+            rb.velocity += direction * steeringSpeed;
+            Arrive();
+        }
+
     }
 
     public float Arrive()
@@ -116,6 +129,13 @@ public class PeasantBees : MonoBehaviour
         if (rb.velocity.magnitude > speed)
         {
             rb.velocity = rb.velocity.normalized * speed;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Obstacle") && pissedOff == true)
+        {
+            this.gameObject.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
