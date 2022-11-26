@@ -12,14 +12,14 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField]int numberOfBes;
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
-    public List<PeasantBees> beesInFlowers = new();
+    
     [SerializeField]bool nectarIsAvailable;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
-    [SerializeField] GameObject LeaderBee;
-    
-    
+    [SerializeField] PeasantBees peassant;
+    public List<PeasantBees> beesInFlowers = new ();
+
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -57,11 +57,13 @@ public class FlowerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("PeassantBees") && beeDispatcherScript.dispatch==true)
         {
-            FlowerLosingNectar();
+
+            //FlowerLosingNectar();
 
             if (nectarIsAvailable==true)
             {
-                beeNectarScript.BeesGainingNectar();
+                
+                //beeNectarScript.BeesGainingNectar();
             }
 
             flowerNectarCanvas.SetActive(true);

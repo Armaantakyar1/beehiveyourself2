@@ -8,13 +8,15 @@ public class NectarBar : MonoBehaviour
     public float beeNectarAmount;
     [SerializeField] FlowerBehaviour flowersNectar;
     [SerializeField] TextMeshProUGUI nectarAmountText;
-     void Start()
-     {
-        
-     }
+    public bool collectionstart = true;
+
+                    
     private void Update()
     {
         nectarAmountText.text = beeNectarAmount.ToString("Nectar Amount: 0");
+
+
+
     }
 
 
