@@ -70,7 +70,7 @@ public class FlowerBehaviour : MonoBehaviour
             nectarLeftInTheFlowerText.text = this.flowerNectarAmount.ToString("0");
             if (Input.GetKeyDown(KeyCode.E) && nectarIsAvailable == false)
             {
-                Destroy(flower);
+                Destroy(this.flower);
             }
 
 
