@@ -37,7 +37,7 @@ public class FlowerBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (beesInFlowers.Count > 3)
+        if (beesInFlowers.Count >= 1)
         {
             return;
         }
@@ -45,9 +45,11 @@ public class FlowerBehaviour : MonoBehaviour
         {
             var bee = other.GetComponent<PeasantBees>();
             
-            if (bee != null) {
+            if (bee != null) 
+            {
                 bee.flowerTarget = this.flowerPosition;
                 beesInFlowers.Add(bee);
+                
             }
 
         }
