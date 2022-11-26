@@ -2043,6 +2043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanObstalce (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8396195110731731418, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
 --- !u!1 &412187949 stripped
@@ -4076,7 +4080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4084,7 +4088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.2
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7597,6 +7601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanObstalce
       objectReference: {fileID: 0}
+    - target: {fileID: 8396195110731731418, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
 --- !u!4 &1377238573 stripped
@@ -10263,7 +10271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094950442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.609558, y: 15.08864, z: 17.00029}
+  m_LocalPosition: {x: 62.10956, y: 15.08864, z: 2.9002914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

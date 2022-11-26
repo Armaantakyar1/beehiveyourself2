@@ -46,8 +46,16 @@ public class PeasantBees : MonoBehaviour
         }
         if (beeTarget != null)
         {
-            SeekTarget();
-            //seekobstacle();
+            
+            if(pissedOff == true)
+            {
+                seekobstacle();
+            }
+            else
+            {
+                SeekTarget();
+            }
+            
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
@@ -93,12 +101,7 @@ public class PeasantBees : MonoBehaviour
             direction = (obstacle.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
         }
-        else
-        {
-            direction = (beeTarget.transform.position - transform.position).normalized;
-            rb.velocity += direction * steeringSpeed;
-            Arrive();
-        }
+
 
     }
 
