@@ -10,6 +10,7 @@ TagManager:
   - Peasant
   - PeassantBees
   - Movement points
+  - Humans
   layers:
   - Default
   - TransparentFX
