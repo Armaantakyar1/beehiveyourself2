@@ -63,7 +63,7 @@ MonoBehaviour:
   flowerPosition: {fileID: 1169184601898721536}
   flower: {fileID: 2896914201573185300}
   numberOfBes: 0
-  beeNectarScript: {fileID: 0}
+  beeNectarScript: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
   collectingNectarRate: 0.3
   beesInFlowers: []
   nectarIsAvailable: 0

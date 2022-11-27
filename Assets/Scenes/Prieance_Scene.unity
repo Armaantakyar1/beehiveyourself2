@@ -180,6 +180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: nectaramount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -1167,7 +1171,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -1689,7 +1693,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 2014019546}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -1795,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -3822,7 +3826,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 2014019546}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -4210,6 +4214,7 @@ MonoBehaviour:
   beeNectarAmount: 0
   flowersNectar: {fileID: 716039757}
   nectarAmountText: {fileID: 1292349904}
+  collectionTimer: 20
 --- !u!65 &764491559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4655,7 +4660,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -5493,7 +5498,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -5630,7 +5635,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -6263,7 +6268,7 @@ PrefabInstance:
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: beeNectarScript
       value: 
-      objectReference: {fileID: 764491553}
+      objectReference: {fileID: 0}
     - target: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
       propertyPath: flowerNectarAmount
       value: 5
@@ -10031,6 +10036,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
   m_PrefabInstance: {fileID: 490853690}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2014019546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+  m_PrefabInstance: {fileID: 490853690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33914646bce2fd45995a4e7978eae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2027206105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}

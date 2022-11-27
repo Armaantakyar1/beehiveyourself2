@@ -10,7 +10,7 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField]Transform flowerPosition;
     [SerializeField] GameObject flower;
     [SerializeField]int numberOfBes;
-    [SerializeField] NectarBar beeNectarScript;
+    //[SerializeField] nectarBheaviour beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     public bool nectarIsAvailable;
@@ -18,8 +18,9 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
     [SerializeField] GameObject LeaderBee;
-    
-    
+    [SerializeField] nectarBheaviour beeNectarScript;
+
+
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -31,7 +32,7 @@ public class FlowerBehaviour : MonoBehaviour
     void Update()
     {
         Debug.Log( flowerNectarAmount);
-        beeNectarScript.nectarAmountCheck(); 
+        nectarAmountCheck(); 
 
 
     }
@@ -59,11 +60,16 @@ public class FlowerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("PeassantBees") && beeDispatcherScript.dispatch==true)
         {
-            beeNectarScript.FlowerLosingNectar();
-
+           
             if (nectarIsAvailable==true)
             {
-                beeNectarScript.BeesGainingNectar();
+                Debug.Log("start");
+           
+                beeNectarScript.collectionStart = true;
+            }
+            else
+            {
+                beeNectarScript.collectionStart = false;
             }
 
             flowerNectarCanvas.SetActive(true);
@@ -85,10 +91,20 @@ public class FlowerBehaviour : MonoBehaviour
         }
         
     }
-
-
-
+    public void nectarAmountCheck()
+    {
+        if (flowerNectarAmount <= 0)
+        {
+            nectarIsAvailable = false;
+        }
+        if (flowerNectarAmount > 0)
+        {
+            nectarIsAvailable = true;
+        }
     }
+
+
+}
 
 
 

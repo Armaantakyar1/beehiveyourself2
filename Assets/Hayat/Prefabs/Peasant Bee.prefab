@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 7254795992385443345}
   - component: {fileID: 7254795992385443438}
   - component: {fileID: 7254795992385443350}
+  - component: {fileID: 4527002423427955566}
   m_Layer: 0
   m_Name: Peasant Bee
   m_TagString: PeassantBees
@@ -254,6 +255,7 @@ MonoBehaviour:
   seperationForce: 0.1
   beedispatcher: {fileID: 6220530494042911648, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
   neighbourPeassants: []
+  pissedOff: 0
 --- !u!135 &7254795992385443350
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -267,3 +269,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.88
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4527002423427955566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7254795992385443439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33914646bce2fd45995a4e7978eae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nectaramount: 0
+  flowersNectar: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  collectionTimer: 5
+  collectionStart: 0
