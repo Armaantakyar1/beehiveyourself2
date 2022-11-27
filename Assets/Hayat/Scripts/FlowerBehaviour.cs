@@ -12,14 +12,14 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField]int numberOfBes;
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
-    
-    [SerializeField]bool nectarIsAvailable;
+    public List<PeasantBees> beesInFlowers = new();
+    public bool nectarIsAvailable;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
-    [SerializeField] PeasantBees peassant;
-    public List<PeasantBees> beesInFlowers = new ();
-
+    [SerializeField] GameObject LeaderBee;
+    
+    
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
@@ -31,7 +31,7 @@ public class FlowerBehaviour : MonoBehaviour
     void Update()
     {
         Debug.Log( flowerNectarAmount);
-        nectarAmountCheck(); 
+        beeNectarScript.nectarAmountCheck(); 
 
 
     }
@@ -59,13 +59,11 @@ public class FlowerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("PeassantBees") && beeDispatcherScript.dispatch==true)
         {
-
-            //FlowerLosingNectar();
+            beeNectarScript.FlowerLosingNectar();
 
             if (nectarIsAvailable==true)
             {
-                
-                //beeNectarScript.BeesGainingNectar();
+                beeNectarScript.BeesGainingNectar();
             }
 
             flowerNectarCanvas.SetActive(true);
@@ -89,27 +87,8 @@ public class FlowerBehaviour : MonoBehaviour
     }
 
 
-    public void FlowerLosingNectar ()
-    {
-
-        if (nectarIsAvailable==true)
-        {
-            //I want flower nectar to get drained when player is colliding with it
-            this.flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
-            
-        }
 
     }
 
-    void nectarAmountCheck()
-    {
-        if (flowerNectarAmount <= 0)
-        {
-            nectarIsAvailable = false;
-        }
-        if (flowerNectarAmount > 0)
-        {
-            nectarIsAvailable = true;
-        }
-    }
-}
+
+
