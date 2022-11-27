@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class nectarBheaviour : MonoBehaviour
 {
-    public float nectaramount;
+    
     [SerializeField] FlowerBehaviour flowersNectar;
+    public float nectaramount;
     [SerializeField] float collectionTimer = 5f;
     public bool collectionStart;
     // Start is called before the first frame update
     void Start()
     {
-        
+        nectaramount = flowersNectar.flowerNectarAmount;
     }
 
     // Update is called once per frame
