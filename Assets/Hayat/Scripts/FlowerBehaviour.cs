@@ -13,7 +13,7 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] NectarBar beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
-    [SerializeField]bool nectarIsAvailable;
+    public bool nectarIsAvailable;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
@@ -31,7 +31,7 @@ public class FlowerBehaviour : MonoBehaviour
     void Update()
     {
         Debug.Log( flowerNectarAmount);
-        nectarAmountCheck(); 
+        beeNectarScript.nectarAmountCheck(); 
 
 
     }
@@ -59,7 +59,7 @@ public class FlowerBehaviour : MonoBehaviour
     {
         if (other.CompareTag("PeassantBees") && beeDispatcherScript.dispatch==true)
         {
-            FlowerLosingNectar();
+            beeNectarScript.FlowerLosingNectar();
 
             if (nectarIsAvailable==true)
             {
@@ -87,27 +87,8 @@ public class FlowerBehaviour : MonoBehaviour
     }
 
 
-    public void FlowerLosingNectar ()
-    {
-
-        if (nectarIsAvailable==true)
-        {
-            //I want flower nectar to get drained when player is colliding with it
-            this.flowerNectarAmount -= 1 * collectingNectarRate * Time.deltaTime ;
-            
-        }
 
     }
 
-    void nectarAmountCheck()
-    {
-        if (flowerNectarAmount <= 0)
-        {
-            nectarIsAvailable = false;
-        }
-        if (flowerNectarAmount > 0)
-        {
-            nectarIsAvailable = true;
-        }
-    }
-}
+
+
