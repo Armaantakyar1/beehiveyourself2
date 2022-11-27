@@ -151,9 +151,10 @@ public class PeasantBees : MonoBehaviour
                 neighbourPeassants.Add(neighbour);
             }
         }
-        if (other.CompareTag("Obstacle"))
+        if (other.CompareTag("Humans"))
         {
             Debug.Log("human");
+
         }
         //add to the list
     }

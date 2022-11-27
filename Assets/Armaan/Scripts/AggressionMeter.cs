@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class humanAgression : MonoBehaviour
+public class AggressionMeter : MonoBehaviour
 {
 
     public List<PeasantBees> seekingbees = new ();
     [SerializeField] Transform obstacleposition;
-    [SerializeField] float agressionAmount;
-    [SerializeField] float maxAgression;
+    [SerializeField] float humanAggressionAmount;
+    [SerializeField] float humanMaxAggressionAmount;
+    [SerializeField] float beeAggressionAmount;
+    [SerializeField] float beeMaxAggressionAmount;
+    [SerializeField] float aggressionRate;
     [SerializeField]PeasantBees peasants;
      // Start is called before the first frame update
     void Start()
@@ -19,7 +22,7 @@ public class humanAgression : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agressionAmount >= maxAgression)
+        if (humanAggressionAmount >= humanMaxAggressionAmount)
         {
             peasants.pissedOff = true;
         }
@@ -43,4 +46,21 @@ public class humanAgression : MonoBehaviour
         }
 
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("PeassantBees"))
+        {
+            if (humanAggressionAmount<= humanMaxAggressionAmount)
+            {
+                humanAggressionAmount += 1 * aggressionRate * Time.deltaTime;
+            }
+            if (beeAggressionAmount <= beeMaxAggressionAmount)
+            {
+                beeAggressionAmount += 1 * aggressionRate * Time.deltaTime;
+            }
+        }
+
+    }
+
+    
 }
