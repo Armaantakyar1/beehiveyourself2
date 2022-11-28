@@ -18,13 +18,19 @@ public class textBox : MonoBehaviour
         {
             box1.enabled = true;
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (Input.GetMouseButton(0))
         {
             box1.enabled = false;
         }
+
     }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+        //if (other.CompareTag("Player"))
+        //{
+       //     box1.enabled = false;
+        //}
+    //}
 }
