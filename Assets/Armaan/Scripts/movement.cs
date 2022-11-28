@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    private CharacterController controller;
+    
     public float speed = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        Vector3 position = transform.position;
 
-        Vector3 direction = new Vector3(horizontal, 0, vertical);
-        Vector3 velocity = direction * speed;      
-        controller.Move(velocity * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
+        {
+            position.x -= speed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            position.x += speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            position.z += speed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            position.z -= speed * Time.deltaTime;
+        }
+        transform.position = position;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
+
 }
