@@ -63,13 +63,13 @@ public class FlowerBehaviour : MonoBehaviour
            
             if (nectarIsAvailable==true)
             {
-                Debug.Log("start");
-           
-                beeNectarScript.collectionStart = true;
+               
+
+                beeNectarScript.startCollection();
             }
-            else
+            if(nectarIsAvailable == false)
             {
-                beeNectarScript.collectionStart = false;
+                beeNectarScript.stopCollection();
             }
 
             flowerNectarCanvas.SetActive(true);

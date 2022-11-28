@@ -8,7 +8,7 @@ public class nectarBheaviour : MonoBehaviour
     [SerializeField] FlowerBehaviour flowersNectar;
     public float nectaramount;
     [SerializeField] float collectionTimer = 5f;
-    public bool collectionStart;
+    [SerializeField] bool collectionStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,16 @@ public class nectarBheaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(collectionStart == true)
+        nectarchange();
+    }
+    public void nectarchange()
+    {
+        
+        if (collectionStart == true)
         {
+            Debug.Log("pog");
             collectionTimer -= Time.deltaTime;
-            if(collectionTimer<= 0)
+            if (collectionTimer <= 0)
             {
                 BeesGainingNectar();
                 FlowerLosingNectar();
@@ -41,10 +47,21 @@ public class nectarBheaviour : MonoBehaviour
 
         if (flowersNectar.nectarIsAvailable == true)
         {
-            
+      
             this.flowersNectar.flowerNectarAmount -= 1;//* flowersNectar.collectingNectarRate * Time.deltaTime;
 
         }
 
+    }
+    public void startCollection()
+    {
+        
+
+        collectionStart = true;
+    }
+
+    public void stopCollection()
+    {
+        collectionStart = false;
     }
 }
