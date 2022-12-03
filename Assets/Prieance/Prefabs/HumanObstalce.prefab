@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2132898923208000249}
   - component: {fileID: 9150919041887713127}
   - component: {fileID: 4389545698617422004}
+  - component: {fileID: 7451947378549106543}
   - component: {fileID: 6910213797343738026}
   m_Layer: 0
   m_Name: HumanObstalce
@@ -161,9 +162,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seekingbees: []
   obstacleposition: {fileID: 2132898923208000249}
-  agressionAmount: 0
-  maxAgression: 0
+  humanAggressionAmount: 0
+  humanMaxAggressionAmount: 0
+  beeAggressionAmount: 0
+  beeMaxAggressionAmount: 0
+  aggressionRate: 0
   peasants: {fileID: 387585503403809115, guid: ec3d7b20177834e4e8c6a97250e98f34, type: 3}
+--- !u!114 &7451947378549106543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954879871397783330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d0fc528edba1e47bde31bddb7964d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rotatingSpeed: 0
+  rotatePause: 0
+  rotatingDuration: 0
+  walkTime: 0
+  peasantBees: {fileID: 0}
+  aggressionMeter: {fileID: 0}
 --- !u!135 &6910213797343738026
 SphereCollider:
   m_ObjectHideFlags: 0

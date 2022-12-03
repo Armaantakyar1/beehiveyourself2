@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HumanWandering : MonoBehaviour
 {
-    [SerializeField] float speed;
+    public float speed;
     [SerializeField] float rotatingSpeed;
 
     [SerializeField] float rotatePause;
@@ -15,9 +15,49 @@ public class HumanWandering : MonoBehaviour
     bool isWandering = false;
     bool isWalking = false;
     bool isRotating=false;
-     Rigidbody rb;
+    public Rigidbody rb;
+    public bool humanIsAttacking = false;
+    public bool isInspecting;
+    [SerializeField] PeasantBees peasantBees;
+    [SerializeField] AggressionMeter aggressionMeter;
+    [SerializeField] HumanAttack humanAttack;
+    [SerializeField] float timerBeforeAttacking;
+    [SerializeField] float maxTimerBeforeAttacking;
+    [SerializeField] float timerRate;
 
+    void HumanInspectingBees()
+    {
+        //stop moving and turn to bees
+        isInspecting = true;
+        if (humanIsAttacking == true)
+        {
+            humanAttack.HumanAttacking();
+            Debug.Log("human is gonna attack");
+        }
+        if (timerBeforeAttacking >= 0)
+        {
+            timerBeforeAttacking -= timerRate * Time.deltaTime;
+        }
+        if (timerBeforeAttacking <= 0)
+        {
+            isInspecting = false;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
 
+            HumanInspectingBees();
+        }
+    }
+    /*private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            //timerBeforeAttacking = maxTimerBeforeAttacking; use this when you make the going back to position function
+        }
+    }*/
 
     void Start()
     {
@@ -27,9 +67,14 @@ public class HumanWandering : MonoBehaviour
 
     void Update()
     {
-        if (isWandering==false)
+        if (isWandering==false && humanIsAttacking == false && isInspecting==false)
         {
             StartCoroutine(Wander());
+        }
+
+        if (isInspecting==true)
+        {
+            StopCoroutine(Wander());
         }
 
         if (isRotating==true)
@@ -61,7 +106,6 @@ public class HumanWandering : MonoBehaviour
             isWandering = false;
         }
     }
-
 
 
 

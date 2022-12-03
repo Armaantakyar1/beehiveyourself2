@@ -7,13 +7,15 @@ public class AggressionMeter : MonoBehaviour
 
     public List<PeasantBees> seekingbees = new ();
     [SerializeField] Transform obstacleposition;
-    [SerializeField] float humanAggressionAmount;
-    [SerializeField] float humanMaxAggressionAmount;
-    [SerializeField] float beeAggressionAmount;
-    [SerializeField] float beeMaxAggressionAmount;
-    [SerializeField] float aggressionRate;
+    public float humanAggressionAmount;
+    public float humanMaxAggressionAmount;
+    public float beeAggressionAmount;
+    public float beeMaxAggressionAmount;
+    public float aggressionRate;
     [SerializeField]PeasantBees peasants;
-     // Start is called before the first frame update
+    [SerializeField] HumanWandering human;
+
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -22,9 +24,13 @@ public class AggressionMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (humanAggressionAmount >= humanMaxAggressionAmount)
+        if (beeAggressionAmount >= beeMaxAggressionAmount)
         {
             peasants.pissedOff = true;
+        }
+        if (humanAggressionAmount >= humanMaxAggressionAmount)
+        {
+            human.humanIsAttacking = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -62,5 +68,5 @@ public class AggressionMeter : MonoBehaviour
 
     }
 
-    
+
 }
