@@ -6,17 +6,20 @@ using UnityEngine.UI;
 public class timerHex : MonoBehaviour
 {
     public Image filler;
-   
+    public float gameTime;
     public void SetMaxTime()
     {
-        filler.fillAmount = 300;
+        filler.fillAmount = gameTime;
+    }
+    private void Update()
+    {
+        Timer();
+        
     }
 
     public void Timer()
     {
-        if(filler.fillAmount >= 300)
-        {
-            filler.fillAmount -= 1 * Time.deltaTime;
-        }
+        filler.fillAmount -= Time.deltaTime / gameTime;
+
     }
 }

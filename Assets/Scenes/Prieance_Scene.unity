@@ -9797,6 +9797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filler: {fileID: 775673285}
+  gameTime: 300
 --- !u!1001 &1298476867
 PrefabInstance:
   m_ObjectHideFlags: 0
