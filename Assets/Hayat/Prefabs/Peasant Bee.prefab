@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33914646bce2fd45995a4e7978eae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nectaramount: 0
   flowersNectar: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
+  nectaramount: 0
   collectionTimer: 5
   collectionStart: 0

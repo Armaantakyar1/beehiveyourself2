@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6220530494042911648}
   - component: {fileID: 2491251236739834677}
   - component: {fileID: 8632935616802289160}
+  - component: {fileID: 278552027576378165}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -125,6 +126,28 @@ MonoBehaviour:
   beeNectarAmount: 0
   flowersNectar: {fileID: 373986011158565984, guid: 7c5fc0dbd89d1ce488d1610acf06cca5, type: 3}
   nectarAmountText: {fileID: 0}
+  collectionTimer: 0
+--- !u!114 &278552027576378165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346751669391269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d1a600c8f56c468c37979fef669ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seekingbees: []
+  obstacleposition: {fileID: 0}
+  humanAggressionAmount: 0
+  humanMaxAggressionAmount: 0
+  beeAggressionAmount: 0
+  beeMaxAggressionAmount: 0
+  aggressionRate: 0
+  peasants: {fileID: 0}
+  human: {fileID: 0}
 --- !u!1 &346751669624099613
 GameObject:
   m_ObjectHideFlags: 0
