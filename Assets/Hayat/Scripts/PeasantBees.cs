@@ -47,7 +47,7 @@ public class PeasantBees : MonoBehaviour
         if (beeTarget != null)
         {
             
-            if(pissedOff == true)
+            if(pissedOff == true && obstacle != null)
             {
                 seekobstacle();
             }
@@ -96,11 +96,15 @@ public class PeasantBees : MonoBehaviour
 
     public void seekobstacle()
     {
-        if(obstacle != null && pissedOff == true)
+
+        if(pissedOff == true)
         {
             direction = (obstacle.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
         }
+
+
+
 
 
     }

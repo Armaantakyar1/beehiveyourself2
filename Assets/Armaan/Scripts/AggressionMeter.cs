@@ -18,16 +18,13 @@ public class AggressionMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PeasantBees peasants = GetComponent<PeasantBees>();   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (beeAggressionAmount >= beeMaxAggressionAmount)
-        {
-            peasants.pissedOff = true;
-        }
+
         if (humanAggressionAmount >= humanMaxAggressionAmount)
         {
             human.humanIsAttacking = true;
@@ -59,6 +56,10 @@ public class AggressionMeter : MonoBehaviour
             if (humanAggressionAmount<= humanMaxAggressionAmount)
             {
                 humanAggressionAmount += 1 * aggressionRate * Time.deltaTime;
+            }
+            if (beeAggressionAmount >= beeMaxAggressionAmount)
+            {
+                peasants.pissedOff = true;
             }
             if (beeAggressionAmount <= beeMaxAggressionAmount)
             {
