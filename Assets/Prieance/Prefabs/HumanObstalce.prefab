@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 4389545698617422004}
   - component: {fileID: 7451947378549106543}
   - component: {fileID: 6910213797343738026}
+  - component: {fileID: 5530051613858853286}
   m_Layer: 0
   m_Name: HumanObstalce
   m_TagString: Obstacle
@@ -202,3 +203,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.0017974
   m_Center: {x: 0, y: 0, z: 0.23526168}
+--- !u!114 &5530051613858853286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954879871397783330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325dedf653e9ec146aeb87010727d00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 0, z: 0}
+  maxDistance: 0
+  human: {fileID: 0}
+  peasants: {fileID: 0}
+  humanMovement: {fileID: 0}
