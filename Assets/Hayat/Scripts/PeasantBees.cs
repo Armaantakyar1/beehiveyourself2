@@ -97,7 +97,7 @@ public class PeasantBees : MonoBehaviour
     public void seekobstacle()
     {
 
-        if(obstacle!= null)
+        if(pissedOff == true)
         {
             direction = (obstacle.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
