@@ -2385,6 +2385,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: human
+      value: 
+      objectReference: {fileID: 1797153319}
+    - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: maxAgression
       value: 10
       objectReference: {fileID: 0}
@@ -2404,6 +2408,22 @@ PrefabInstance:
       propertyPath: humanMaxAggressionAmount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5530051613858853286, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: human
+      value: 
+      objectReference: {fileID: 1797153322}
+    - target: {fileID: 5530051613858853286, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: peasants
+      value: 
+      objectReference: {fileID: 1413374452}
+    - target: {fileID: 5530051613858853286, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: maxDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530051613858853286, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: humanMovement
+      value: 
+      objectReference: {fileID: 1797153319}
     - target: {fileID: 5954879871397783330, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: m_Name
       value: HumanObstalce (1)
@@ -2412,12 +2432,52 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Humans
       objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: walkTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: peasantBees
+      value: 
+      objectReference: {fileID: 1413374452}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: rotatePause
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: rotatingSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: aggressionMeter
+      value: 
+      objectReference: {fileID: 1797153322}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: rotatingDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8396195110731731418, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+--- !u!114 &408515049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5530051613858853286, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+  m_PrefabInstance: {fileID: 408515048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797153312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325dedf653e9ec146aeb87010727d00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &412187949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 346751669391269132, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
@@ -10377,6 +10437,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33914646bce2fd45995a4e7978eae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1413374452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+  m_PrefabInstance: {fileID: 194176867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548323198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710cdad421fb6f44da5ea89fca573d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1431856686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
@@ -12096,15 +12167,26 @@ MonoBehaviour:
   rotatePause: 0.5
   rotatingDuration: 3
   walkTime: 2
-  rb: {fileID: 0}
+  rb: {fileID: 1797153315}
   humanIsAttacking: 0
   isInspecting: 0
-  peasantBees: {fileID: 0}
-  aggressionMeter: {fileID: 0}
-  humanAttack: {fileID: 0}
-  timerBeforeAttacking: 0
-  maxTimerBeforeAttacking: 0
-  timerRate: 0
+  peasantBees: {fileID: 1413374452}
+  aggressionMeter: {fileID: 1797153322}
+  humanAttack: {fileID: 408515049}
+  timerBeforeAttacking: 10
+  maxTimerBeforeAttacking: 10
+  timerRate: 0.5
+--- !u!114 &1797153322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+  m_PrefabInstance: {fileID: 408515048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797153312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d1a600c8f56c468c37979fef669ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1822585543
 GameObject:
   m_ObjectHideFlags: 0
