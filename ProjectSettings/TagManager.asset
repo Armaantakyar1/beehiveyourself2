@@ -11,6 +11,7 @@ TagManager:
   - PeassantBees
   - Movement points
   - Humans
+  - Reset
   layers:
   - Default
   - TransparentFX

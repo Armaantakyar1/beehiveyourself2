@@ -19,18 +19,18 @@ public class textBox : MonoBehaviour
             box1.enabled = true;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.Return))
         {
             box1.enabled = false;
         }
 
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-        //if (other.CompareTag("Player"))
-        //{
-       //     box1.enabled = false;
-        //}
-    //}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            box1.enabled = false;
+        }
+    }
 }

@@ -35,5 +35,4 @@ public class movement : MonoBehaviour
         }
         transform.position = position;
     }
-
 }

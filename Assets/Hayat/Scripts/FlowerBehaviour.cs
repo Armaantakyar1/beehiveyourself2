@@ -13,7 +13,7 @@ public class FlowerBehaviour : MonoBehaviour
     //[SerializeField] nectarBheaviour beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
-    public bool nectarIsAvailable;
+    public bool nectarIsAvailable = true;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
@@ -31,7 +31,7 @@ public class FlowerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log( flowerNectarAmount);
+        
         nectarAmountCheck(); 
 
 
@@ -63,9 +63,8 @@ public class FlowerBehaviour : MonoBehaviour
            
             if (nectarIsAvailable==true)
             {
-               
-
                 beeNectarScript.startCollection();
+                Debug.Log("lalalalal");
             }
             if(nectarIsAvailable == false)
             {
