@@ -168,6 +168,7 @@ MonoBehaviour:
   beeMaxAggressionAmount: 0
   aggressionRate: 0
   peasants: {fileID: 387585503403809115, guid: ec3d7b20177834e4e8c6a97250e98f34, type: 3}
+  human: {fileID: 0}
 --- !u!114 &7451947378549106543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   walkTime: 0
   peasantBees: {fileID: 0}
   aggressionMeter: {fileID: 0}
+  timerBeforeAttacking: 0
 --- !u!135 &6910213797343738026
 SphereCollider:
   m_ObjectHideFlags: 0
