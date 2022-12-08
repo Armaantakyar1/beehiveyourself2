@@ -21,27 +21,33 @@ public class HumanWandering : MonoBehaviour
     [SerializeField] PeasantBees peasantBees;
     [SerializeField] AggressionMeter aggressionMeter;
     [SerializeField] HumanAttack humanAttack;
-    [SerializeField] float timerBeforeAttacking;
-    [SerializeField] float maxTimerBeforeAttacking;
+    public float timerBeforeAttacking;
+    public float maxTimerBeforeAttacking;
     [SerializeField] float timerRate;
 
     void HumanInspectingBees()
     {
+        humanIsAttacking = false;
         //stop moving and turn to bees
-        isInspecting = true;
-        if (humanIsAttacking == true)
-        {
-            humanAttack.HumanAttacking();
-            Debug.Log("human is gonna attack");
+        if (humanIsAttacking == false )
+        {     
+            if (timerBeforeAttacking <= 0)
+            {               
+                isInspecting = false;
+                humanIsAttacking = true;
+                humanAttack.HumanAttacking();
+                Debug.Log("human is gonna attack");
+            }    
+            
         }
         if (timerBeforeAttacking >= 0)
         {
+            transform.LookAt(peasantBees.beeTarget);
             timerBeforeAttacking -= timerRate * Time.deltaTime;
+            isInspecting = true;
         }
-        if (timerBeforeAttacking <= 0)
-        {
-            isInspecting = false;
-        }
+        
+
     }
     private void OnTriggerStay(Collider other)
     {
@@ -49,6 +55,14 @@ public class HumanWandering : MonoBehaviour
         {
 
             HumanInspectingBees();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+            isInspecting = false;
         }
     }
     /*private void OnTriggerExit(Collider other)
@@ -72,7 +86,7 @@ public class HumanWandering : MonoBehaviour
             StartCoroutine(Wander());
         }
 
-        if (isInspecting==true)
+        if (isInspecting==true && humanIsAttacking==true)
         {
             StopCoroutine(Wander());
         }
