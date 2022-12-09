@@ -4414,6 +4414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beeHive: {fileID: 1634145932}
   timerScript: {fileID: 0}
+  human: {fileID: 0}
 --- !u!114 &764491553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6558,6 +6559,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
   m_PrefabInstance: {fileID: 688539373}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1042712750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: aggressionRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: beeMaxAggressionAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954879871397783330, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_Name
+      value: HumanObstalce
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451947378549106543, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: peasantBees
+      value: 
+      objectReference: {fileID: 1734522499}
+    - target: {fileID: 8396195110731731418, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
 --- !u!4 &1043945593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254795992385443348, guid: 6094409324b855c46978b9aaec481954, type: 3}
