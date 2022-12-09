@@ -10,13 +10,16 @@ public class HumanAttack : MonoBehaviour
     Vector3 desiredVelocity;
     Vector3 currentVelocity;
     Vector3 steeringVelocity;
-    [SerializeField] AggressionMeter human;
+    AggressionMeter human;
     [SerializeField] PeasantBees peasants;
-    [SerializeField] HumanWandering humanMovement;
+    HumanWandering humanMovement;
     void Start()
     {
         //originalPosition = humanMovement.rb.transform.position;
-        
+        human = GetComponent<AggressionMeter>();
+        peasants = GetComponent<PeasantBees>();
+        humanMovement = GetComponent<HumanWandering>();
+
     }
     public void HumanAttacking()
     {
