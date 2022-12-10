@@ -49,6 +49,7 @@ public class PeasantBees : MonoBehaviour
             
             if(pissedOff == true && obstacle != null)
             {
+                Debug.Log("pissedoff");
                 seekobstacle();
             }
             else
