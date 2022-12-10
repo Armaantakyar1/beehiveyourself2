@@ -106,7 +106,6 @@ public class HumanWandering : MonoBehaviour
         {
 
             isWandering = true;
-            isWalking = false;
             //yield return new WaitForSeconds(walkWait);
             isWalking = true;
             yield return new WaitForSeconds(walkTime);
