@@ -59,7 +59,7 @@ public class AggressionMeter : MonoBehaviour
             }
             if (beeAggressionAmount >= beeMaxAggressionAmount)
             {
-                peasants.seekobstacle();
+                peasants.pissedOff = true;
             }
             if (beeAggressionAmount <= beeMaxAggressionAmount)
             {
