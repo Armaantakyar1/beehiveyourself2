@@ -27,20 +27,13 @@ public class AggressionMeter : MonoBehaviour
     void Update()
     {
 
-        if (humanAggressionAmount >= humanMaxAggressionAmount)
-        {
-            human.humanIsAttacking = true;
-        }
         if (inRadius == true)
         {
-            collectionTimer -= Time.deltaTime;
+            collectionTimer = collectionTimer - Time.deltaTime;
             if (collectionTimer <= 0)
             {
-                if (beeAggressionAmount <= beeMaxAggressionAmount)
-                {
-                    beeAggressionAmount += 1;
-                    collectionTimer = 5f;
-                }
+
+                Agreesiontimer();
                 
             }
             if (beeAggressionAmount >= beeMaxAggressionAmount)
@@ -48,8 +41,21 @@ public class AggressionMeter : MonoBehaviour
                 peasants.pissedoff();
             }
         }
-
+        if (humanAggressionAmount >= humanMaxAggressionAmount)
+        {
+            human.humanIsAttacking = true;
+        }
     }
+
+    void Agreesiontimer()
+    {
+         if (beeAggressionAmount <= beeMaxAggressionAmount)
+         {
+              beeAggressionAmount += 1;
+              collectionTimer = 5f;
+         }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PeassantBees"))

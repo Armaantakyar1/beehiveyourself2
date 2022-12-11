@@ -49,11 +49,12 @@ public class PeasantBees : MonoBehaviour
         {
 
             SeekTarget();
+
             
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
-        if (beeTarget == null && flowerTarget == null)
+        if (beeTarget == null )
         {
             seekobstacle();
             float ratio = Arrive();
@@ -107,7 +108,7 @@ public class PeasantBees : MonoBehaviour
 
     public void pissedoff()
     {
-        Debug.Log("loaoajdaadinn");
+        
         beeTarget = null; 
         flowerTarget = null;
     }
