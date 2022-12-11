@@ -21,7 +21,7 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] private float seperationForce;
     [SerializeField]BeeDisatcher beedispatcher;
     [SerializeField]List<PeasantBees> neighbourPeassants = new();
-    
+    bool beeDeath = false;
     
 
     public void SwitchTargets(Transform targetToFollow)
@@ -100,6 +100,7 @@ public class PeasantBees : MonoBehaviour
 
         if(obstacle!= null)
         {
+            beeDeath = true;
             direction = (obstacle.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
         }
@@ -144,7 +145,7 @@ public class PeasantBees : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Obstacle") )
+        if(collision.gameObject.CompareTag("Obstacle") && beeDeath == true )
         {
             this.gameObject.SetActive(false);
         }
