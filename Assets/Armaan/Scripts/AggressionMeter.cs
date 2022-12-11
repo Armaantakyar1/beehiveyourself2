@@ -14,6 +14,8 @@ public class AggressionMeter : MonoBehaviour
     public float aggressionRate;
     [SerializeField]PeasantBees peasants;
     [SerializeField] HumanWandering human;
+    [SerializeField]bool inRadius;
+    [SerializeField] float collectionTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +31,31 @@ public class AggressionMeter : MonoBehaviour
         {
             human.humanIsAttacking = true;
         }
+        if (inRadius == true)
+        {
+            collectionTimer -= Time.deltaTime;
+            if (collectionTimer <= 0)
+            {
+                if (beeAggressionAmount <= beeMaxAggressionAmount)
+                {
+                    beeAggressionAmount += 1;
+                    collectionTimer = 5f;
+                }
+                
+            }
+            if (beeAggressionAmount >= beeMaxAggressionAmount)
+            {
+                peasants.pissedoff();
+            }
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("PeassantBees"))
+        {
+            inRadius = true;
+        }
         if (seekingbees.Count > 3)
         {
             return;
@@ -45,9 +69,7 @@ public class AggressionMeter : MonoBehaviour
                 bee.obstacle = this.obstacleposition;
                 seekingbees.Add(bee);
             }
-
         }
-
     }
     private void OnTriggerStay(Collider other)
     {
@@ -57,16 +79,16 @@ public class AggressionMeter : MonoBehaviour
             {
                 humanAggressionAmount += 1 * aggressionRate * Time.deltaTime;
             }
-            if (beeAggressionAmount >= beeMaxAggressionAmount)
-            {
-                peasants.pissedOff = true;
-            }
-            if (beeAggressionAmount <= beeMaxAggressionAmount)
-            {
-                beeAggressionAmount += 1 * aggressionRate * Time.deltaTime;
-            }
+            
         }
 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("PeassantBees"))
+        {
+            inRadius = false;
+        }
     }
 
 
