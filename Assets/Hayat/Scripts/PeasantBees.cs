@@ -20,7 +20,7 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] private float seperationForce;
     [SerializeField]BeeDisatcher beedispatcher;
-    [SerializeField]List<PeasantBees> neighbourPeassants = new();
+    public List<PeasantBees> neighbourPeassants = new();
     public bool pissedOff = false;
 
     public void SwitchTargets(Transform targetToFollow)
