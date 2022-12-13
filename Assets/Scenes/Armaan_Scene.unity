@@ -965,6 +965,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1029997000}
     - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 555975965}
+    - target: {fileID: 7254795992385443438, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: beeTarget
       value: 
       objectReference: {fileID: 764491548}
@@ -3050,6 +3054,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7254795992385443439, guid: 6094409324b855c46978b9aaec481954, type: 3}
   m_PrefabInstance: {fileID: 194176867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &555975965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2132898923208000249, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+  m_PrefabInstance: {fileID: 1042712750}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565946542
 PrefabInstance:

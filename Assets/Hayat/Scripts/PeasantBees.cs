@@ -61,6 +61,7 @@ public class PeasantBees : MonoBehaviour
     }
     public void AngryBee()
     {
+        Debug.Log("pissedoff");
         pissedOff = true;
     }
     private void Seperate()
