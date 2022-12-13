@@ -16,17 +16,22 @@ public class AggressionMeter : MonoBehaviour
     [SerializeField] HumanWandering human;
     [SerializeField]bool inRadius;
     [SerializeField] float collectionTimer;
+    [SerializeField] Sliders slider;
 
     // Start is called before the first frame update
     void Start()
     {
-        PeasantBees peasants = GetComponent<PeasantBees>();   
+        PeasantBees peasants = GetComponent<PeasantBees>();
+        //slider = GetComponent<Sliders>();
+        slider.SetMaxValue(beeMaxAggressionAmount);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        slider.SetValue(beeAggressionAmount);
+        Debug.Log("bee slider should move");
         if (inRadius == true)
         {
             collectionTimer = collectionTimer - Time.deltaTime;
