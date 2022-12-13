@@ -38,7 +38,7 @@ public class AggressionMeter : MonoBehaviour
             }
             if (beeAggressionAmount >= beeMaxAggressionAmount)
             {
-                peasants.pissedoff();
+                peasants.AngryBee();
             }
         }
         if (humanAggressionAmount >= humanMaxAggressionAmount)

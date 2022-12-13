@@ -21,7 +21,7 @@ public class PeasantBees : MonoBehaviour
     [SerializeField] private float seperationForce;
     [SerializeField]BeeDisatcher beedispatcher;
     public List<PeasantBees> neighbourPeassants = new();
-    public bool pissedOff = false;
+    [SerializeField] bool pissedOff;
 
     public void SwitchTargets(Transform targetToFollow)
     {
@@ -46,23 +46,23 @@ public class PeasantBees : MonoBehaviour
         }
         if (beeTarget != null)
         {
-            
-            if(pissedOff == true && obstacle != null)
+            if (pissedOff == true)
             {
-                Debug.Log("pissedoff");
                 seekobstacle();
             }
             else
             {
                 SeekTarget();
             }
-            
             float ratio  =Arrive();
             LimitVelocity(maximumSpeed * ratio);
         }
         this.transform.forward = rb.velocity;
     }
-
+    public void AngryBee()
+    {
+        pissedOff = true;
+    }
     private void Seperate()
     {
         Vector3 seperationDirection = Vector3.zero;
@@ -102,11 +102,8 @@ public class PeasantBees : MonoBehaviour
         {
             direction = (obstacle.transform.position - transform.position).normalized;
             rb.velocity += direction * steeringSpeed;
+            Arrive();
         }
-
-
-
-
 
     }
 
