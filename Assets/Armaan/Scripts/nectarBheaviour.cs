@@ -31,19 +31,13 @@ public class nectarBheaviour : MonoBehaviour
             {
                 BeesGainingNectar();
                 FlowerLosingNectar();
-                collectionTimer = 5f;
+                collectionTimer = 1f;
             }
         
     }
     public void BeesGainingNectar()
     {
-
-        nectaramount += 1;//* flowersNectar.collectingNectarRate * Time.deltaTime;
-
-
-       
-
-        Debug.Log("bee gaining nectar");
+        nectaramount += 1;
     }
     public void FlowerLosingNectar()
     {
