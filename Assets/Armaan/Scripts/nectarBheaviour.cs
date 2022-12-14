@@ -25,10 +25,7 @@ public class nectarBheaviour : MonoBehaviour
             
     }
     public void nectarchange()
-    {
-        
-
-            
+    {  
             collectionTimer -= Time.deltaTime;
             if (collectionTimer <= 0)
             {
@@ -40,11 +37,10 @@ public class nectarBheaviour : MonoBehaviour
     }
     public void BeesGainingNectar()
     {
-        if (flowersNectar.nectarIsAvailable == true)
-        {
-            nectaramount += 1;//* flowersNectar.collectingNectarRate * Time.deltaTime;
 
-        }
+        nectaramount += 1;//* flowersNectar.collectingNectarRate * Time.deltaTime;
+
+
        
 
         Debug.Log("bee gaining nectar");
