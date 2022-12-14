@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SeekingBehaviour : MonoBehaviour
 {
-    public Transform target;
+    public Vector3 target;
     public Rigidbody rb;
     public float speed;
     public float maxSpeed;
 
     void Start()
     {
-       
+        rb = GetComponent<Rigidbody>();
 
     }
 
@@ -19,9 +19,9 @@ public class SeekingBehaviour : MonoBehaviour
     {
 
     }
-    public void Seek(Vector3 vector)
+    public void Seek()
     {
-        var direction = target.position - this.transform.position;
+        var direction = target - this.transform.position;
         rb.velocity += direction * speed;
         this.transform.LookAt(target);
         Truncate();
@@ -29,7 +29,7 @@ public class SeekingBehaviour : MonoBehaviour
 
     public void Arrive()
     {
-        var distance = Vector3.Distance(target.transform.position, transform.position);
+        var distance = Vector3.Distance(target, transform.position);
         if (distance <= 0.3f)
         {
             rb.velocity = Vector3.zero;
@@ -42,7 +42,7 @@ public class SeekingBehaviour : MonoBehaviour
     }
     public void SetTarget(Vector3 targetPositions)
     {
-        this.target.position = targetPositions;
+        this.target= targetPositions;
     }
 
 

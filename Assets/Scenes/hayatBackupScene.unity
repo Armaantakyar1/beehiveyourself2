@@ -10997,6 +10997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364020353}
   - component: {fileID: 1364020354}
+  - component: {fileID: 1364020355}
   m_Layer: 0
   m_Name: destination 2
   m_TagString: Movement points
@@ -11032,6 +11033,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9673328, y: 1.6170455, z: 3.1456375}
   m_Center: {x: -0.9836664, y: 0.30852276, z: 1.0728188}
+--- !u!114 &1364020355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364020352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dc06d6c241d4f429b843155451dc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider: {fileID: 1364020354}
 --- !u!1001 &1367131003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14678,6 +14692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963843515}
   - component: {fileID: 1963843516}
+  - component: {fileID: 1963843517}
   m_Layer: 0
   m_Name: destination 1
   m_TagString: Movement points
@@ -14713,6 +14728,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9673328, y: 1.6170455, z: 3.1456375}
   m_Center: {x: -0.9836664, y: 0.30852276, z: 1.0728188}
+--- !u!114 &1963843517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963843514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dc06d6c241d4f429b843155451dc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider: {fileID: 1963843516}
 --- !u!1001 &2001349528
 PrefabInstance:
   m_ObjectHideFlags: 0

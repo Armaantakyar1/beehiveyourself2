@@ -11,7 +11,6 @@ public class Patroling : MonoBehaviour
 
     public Transform [] destinationPoints;
     public int index=0;
-    Rigidbody rb;
     [SerializeField] SeekingBehaviour seeker;
 
     void Start()
@@ -21,30 +20,40 @@ public class Patroling : MonoBehaviour
         //seeker.SetTarget(destinationPoints[0].position);
         GetComponent<SeekingBehaviour>().SetTarget(destinationPoints[0].position);
         Debug.Log("target set to 0");
-        rb = GetComponent<Rigidbody>();
 
     }
 
     void Update()
-    {
+    {            
+        GetComponent<SeekingBehaviour>().SetTarget(destinationPoints[index].position);
+        GetComponent<SeekingBehaviour>().Seek();
+
+
         if (Vector3.Distance(this.transform.position, destinationPoints[index].position) <= 0.5f)
         {
             Debug.Log("distance idk");
             index++;
             Debug.Log("index is increasing");
-            GetComponent<SeekingBehaviour>().Seek(rb.velocity);
             Debug.Log("seeking rn");
             if (index== destinationPoints.Length)
             {
                 Debug.Log("length max");
                 index = 0;
             }
-            GetComponent<SeekingBehaviour>().SetTarget(destinationPoints[index].position);
             Debug.Log("target is set to index");
         }
         Debug.Log("Index:" + index);            
 
     }
-   
-    
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            this.enabled = false;
+            GetComponent<Inspecting>().enabled = true;
+
+        }
+    }
 }

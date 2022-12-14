@@ -29,16 +29,11 @@ public class Inspecting : MonoBehaviour
         if (inspectingTimer>= maxTime)
         {
             this.enabled = false;
+            GetComponent<Attacking>().enabled = true;
+
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            this.enabled = true;
-        }
-    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -46,6 +41,8 @@ public class Inspecting : MonoBehaviour
         {
             this.enabled = false;
             inspectingTimer = 0;
+            GetComponent<Patroling>().enabled = true;
+
         }
     }
 }
