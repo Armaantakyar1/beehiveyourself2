@@ -37,19 +37,22 @@ public class FlowerBehaviour : MonoBehaviour
         nectarAmountCheck();
         if (collectionStart == true)
         {
-            FlowerLosingNectar();
+            collectionTimer -= Time.deltaTime;
+            if (collectionTimer <= 0)
+            {
+                FlowerLosingNectar();
+                collectionTimer = 5f;
+            }
+            
         }
 
 
     }
     public void FlowerLosingNectar()
     {
-        collectionTimer -= Time.deltaTime;
-        if (collectionTimer<=0)
-        {
-            flowerNectarAmount = flowerNectarAmount - 1;
-            beeNectarScript.BeesGainingNectar();
-        }
+
+        flowerNectarAmount = flowerNectarAmount - 1;
+        beeNectarScript.BeesGainingNectar();
 
     }
     private void OnTriggerEnter(Collider other)
