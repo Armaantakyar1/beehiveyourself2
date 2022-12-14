@@ -30,8 +30,7 @@ public class AggressionMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.SetValue(beeAggressionAmount);
-        Debug.Log("bee slider should move");
+      
         if (inRadius == true)
         {
             collectionTimer = collectionTimer - Time.deltaTime;
@@ -50,6 +49,8 @@ public class AggressionMeter : MonoBehaviour
         {
             human.humanIsAttacking = true;
         }
+        slider.SetValue(beeAggressionAmount);
+        Debug.Log("bee slider should move");
     }
 
     void Agreesiontimer()

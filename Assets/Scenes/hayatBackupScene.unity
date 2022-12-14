@@ -2604,6 +2604,10 @@ PrefabInstance:
       value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: collectionTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: beeMaxAggressionAmount
       value: 10
       objectReference: {fileID: 0}
