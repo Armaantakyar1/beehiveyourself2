@@ -21,18 +21,18 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] nectarBheaviour beeNectarScript;
 
 
-
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
     {
         beeDispatcherScript = GameObject.Find("player").GetComponent<BeeDisatcher>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        nectarAmountCheck(); 
+        nectarAmountCheck();
 
 
     }
