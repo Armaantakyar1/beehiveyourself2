@@ -269,6 +269,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443344, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -476,6 +480,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -1239,6 +1247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -1378,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -74.959984
+      value: 26.3
       objectReference: {fileID: 0}
     - target: {fileID: 346751669391269129, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1452,6 +1464,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1045416263842166864, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8495024209646690285, guid: 17fa387a123b7984fba686d0fb88dd64, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1518,10 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beeNectarAmount: 0
   maxBeeNectar: 0
-  flowersNectar: {fileID: 0}
-  nectarAmountText: {fileID: 0}
   collectionTimer: 0
-  slider: {fileID: 0}
 --- !u!65 &764491559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1578,6 +1591,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -2055,6 +2072,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -2558,6 +2579,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: collectionTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389545698617422004, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: beeMaxAggressionAmount
       value: 2
       objectReference: {fileID: 0}
@@ -2864,6 +2889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -2993,6 +3022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -3201,6 +3234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -3318,6 +3355,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -3841,6 +3882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -4108,6 +4153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443344, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4399,6 +4448,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094950443}
     m_Modifications:
+    - target: {fileID: 4527002423427955566, guid: 6094409324b855c46978b9aaec481954, type: 3}
+      propertyPath: collectionTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7254795992385443345, guid: 6094409324b855c46978b9aaec481954, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -4617,7 +4670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094950442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.2, y: 9, z: 2.6}
+  m_LocalPosition: {x: 136.74, y: 9, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

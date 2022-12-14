@@ -10,10 +10,12 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField]Transform flowerPosition;
     [SerializeField] GameObject flower;
     [SerializeField]int numberOfBes;
+    [SerializeField] float collectionTimer = 0f;
     //[SerializeField] nectarBheaviour beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     public bool nectarIsAvailable = true;
+    bool collectionStart ;
     [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
     [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
@@ -33,7 +35,21 @@ public class FlowerBehaviour : MonoBehaviour
     {
         
         nectarAmountCheck();
+        if (collectionStart == true)
+        {
+            FlowerLosingNectar();
+        }
 
+
+    }
+    public void FlowerLosingNectar()
+    {
+        collectionTimer -= Time.deltaTime;
+        if (collectionTimer<=0)
+        {
+            flowerNectarAmount = flowerNectarAmount - 1;
+            beeNectarScript.BeesGainingNectar();
+        }
 
     }
     private void OnTriggerEnter(Collider other)
@@ -63,12 +79,13 @@ public class FlowerBehaviour : MonoBehaviour
            
             if (nectarIsAvailable==true)
             {
-                beeNectarScript.startCollection();
-                Debug.Log("lalalalal");
+
+                collectionStart = true;
+
             }
             if(nectarIsAvailable == false)
             {
-                beeNectarScript.stopCollection();
+                collectionStart = false;
             }
 
             flowerNectarCanvas.SetActive(true);
