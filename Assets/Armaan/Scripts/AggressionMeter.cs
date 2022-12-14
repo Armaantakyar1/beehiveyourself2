@@ -36,9 +36,7 @@ public class AggressionMeter : MonoBehaviour
             collectionTimer = collectionTimer - Time.deltaTime;
             if (collectionTimer <= 0)
             {
-
                 Agreesiontimer();
-                
             }
             if (beeAggressionAmount >= beeMaxAggressionAmount)
             {
