@@ -10,6 +10,8 @@ public class Inspecting : MonoBehaviour
 
     void OnEnable()
     {
+        GetComponent<Patroling>().enabled = false;
+        GetComponent<Attacking>().enabled = false;
         GetComponent<SeekingBehaviour>().enabled=false;
         GetComponent<Rigidbody>().velocity=Vector3.zero;
         transform.LookAt(bee);

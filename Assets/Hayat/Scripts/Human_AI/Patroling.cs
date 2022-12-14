@@ -16,8 +16,8 @@ public class Patroling : MonoBehaviour
     void Start()
     {
         Debug.Log("hi");
-        //seeker = GetComponent<SeekingBehaviour>();
-        //seeker.SetTarget(destinationPoints[0].position);
+        GetComponent<Attacking>().enabled = false;
+        GetComponent<Inspecting>().enabled = false;
         GetComponent<SeekingBehaviour>().SetTarget(destinationPoints[0].position);
         Debug.Log("target set to 0");
 

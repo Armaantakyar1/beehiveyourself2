@@ -9,15 +9,18 @@ public class nectarBheaviour : MonoBehaviour
     public float nectaramount;
     [SerializeField] float collectionTimer = 0f;
     [SerializeField] bool collectionStart;
-    // Start is called before the first frame update
+    [SerializeField] Sliders slider;
     void Start()
     {
         nectaramount = flowersNectar.flowerNectarAmount;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        slider.SetValue(nectaramount);
+
         if (collectionStart == true)
         {
             nectarchange();
