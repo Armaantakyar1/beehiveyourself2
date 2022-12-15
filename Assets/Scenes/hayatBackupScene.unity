@@ -4416,6 +4416,10 @@ PrefabInstance:
       value: IntroHumanObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5954879871397783330, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954879871397783330, guid: 3c572034646ee974f94f2a8f64722f56, type: 3}
       propertyPath: m_TagString
       value: Humans
       objectReference: {fileID: 0}
