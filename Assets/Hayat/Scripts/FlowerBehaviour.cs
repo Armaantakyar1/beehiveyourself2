@@ -21,13 +21,14 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField] BeeDisatcher beeDispatcherScript;
     [SerializeField] GameObject LeaderBee;
     [SerializeField] nectarBheaviour beeNectarScript;
+    followerFeedback feedback;
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
     {
         beeDispatcherScript = GameObject.Find("player").GetComponent<BeeDisatcher>();
-
+        feedback = GetComponent<followerFeedback>();
     }
 
     // Update is called once per frame
@@ -40,8 +41,10 @@ public class FlowerBehaviour : MonoBehaviour
             collectionTimer -= Time.deltaTime;
             if (collectionTimer <= 0)
             {
-                FlowerLosingNectar();
                 collectionTimer = 5f;
+                FlowerLosingNectar();
+                feedback.changeFeedback();
+                
             }
             
         }
