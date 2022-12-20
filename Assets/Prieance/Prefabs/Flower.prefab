@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7165609766002607347, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.221
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7165609766002607347, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -394,11 +394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8763393322783965060, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 39.333332
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 8763393322783965060, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 11.333333
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
