@@ -12,20 +12,14 @@ public class nectarBheaviour : MonoBehaviour
     [SerializeField] Sliders slider;
     void Start()
     {
-        nectaramount = flowersNectar.flowerNectarAmount;
+       
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.SetValue(nectaramount);
-
-        if (collectionStart == true)
-        {
-            nectarchange();
-        }
-            
+         slider.SetValue(nectaramount);
     }
     public void nectarchange()
     {  
@@ -33,29 +27,18 @@ public class nectarBheaviour : MonoBehaviour
             if (collectionTimer <= 0)
             {
                 BeesGainingNectar();
-                FlowerLosingNectar();
-                collectionTimer = 1f;
+            flowersNectar.FlowerLosingNectar();
+            collectionTimer = 1f;
             }
         
     }
     public void BeesGainingNectar()
     {
-        nectaramount += 1;
-    }
-    public void FlowerLosingNectar()
-    {
-
-        if (flowersNectar.nectarIsAvailable == true)
-        {
-      
-            this.flowersNectar.flowerNectarAmount -= 1;//* flowersNectar.collectingNectarRate * Time.deltaTime;
-
-        }
-
+        
+        nectaramount = nectaramount + 1;
     }
     public void startCollection()
     {
-        
         collectionStart = true;
     }
 

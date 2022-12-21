@@ -10,20 +10,25 @@ public class FlowerBehaviour : MonoBehaviour
     [SerializeField]Transform flowerPosition;
     [SerializeField] GameObject flower;
     [SerializeField]int numberOfBes;
+    [SerializeField] float collectionTimer = 0f;
     //[SerializeField] nectarBheaviour beeNectarScript;
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     public bool nectarIsAvailable = true;
+    bool collectionStart ;
+    [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
+    [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
     [SerializeField] GameObject LeaderBee;
     [SerializeField] nectarBheaviour beeNectarScript;
+    followerFeedback feedback;
 
 
     //I need to add amount of nectar to flowers, a timer, and collision detector
     void Start()
     {
         beeDispatcherScript = GameObject.Find("player").GetComponent<BeeDisatcher>();
-
+        feedback = GetComponent<followerFeedback>();
     }
 
     // Update is called once per frame
@@ -31,7 +36,26 @@ public class FlowerBehaviour : MonoBehaviour
     {
         
         nectarAmountCheck();
+        if (collectionStart == true)
+        {
+            collectionTimer -= Time.deltaTime;
+            if (collectionTimer <= 0)
+            {
+                collectionTimer = 5f;
+                FlowerLosingNectar();
+                feedback.changeFeedback();
+                
+            }
+            
+        }
 
+
+    }
+    public void FlowerLosingNectar()
+    {
+
+        flowerNectarAmount = flowerNectarAmount - 1;
+        beeNectarScript.BeesGainingNectar();
 
     }
     private void OnTriggerEnter(Collider other)
@@ -61,12 +85,13 @@ public class FlowerBehaviour : MonoBehaviour
            
             if (nectarIsAvailable==true)
             {
-                beeNectarScript.startCollection();
-                Debug.Log("lalalalal");
+
+                collectionStart = true;
+
             }
             if(nectarIsAvailable == false)
             {
-                beeNectarScript.stopCollection();
+                collectionStart = false;
             }
 
             if (Input.GetKeyDown(KeyCode.E) && nectarIsAvailable == false)
