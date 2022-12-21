@@ -10,12 +10,15 @@ public class Attacking : MonoBehaviour
     PeasantBees peasants;
     Patroling patroling;
     bool isAttacking;
+    [SerializeField] float killTimer;
+    [SerializeField] float maxKillTimer;
+    public float chasingTimer;
+    [SerializeField] float maxChasingTimer;
 
-    [SerializeField] float chasingTimer;
-    [SerializeField] float maxTimer;
+    [SerializeField] List<GameObject> beesNear = new List<GameObject>();
     void Start()
     {
-        GetComponent<Patroling>().enabled = false;
+        patroling.enabled = false;
         GetComponent<Inspecting>().enabled = false;
         GetComponent<SeekingBehaviour>().SetTarget(beeTarget.position);
         human = GetComponent<AggressionMeter>();
@@ -27,33 +30,63 @@ public class Attacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (human.humanAggressionAmount >= human.humanMaxAggressionAmount)
+        GetComponent<SeekingBehaviour>().SetTarget(beeTarget.position);
+        Debug.Log(beesNear.Count);
+        GetComponent<SeekingBehaviour>().Seek();
+        isAttacking = true;
+
+        if (chasingTimer<= maxChasingTimer)
         {
-            GetComponent<SeekingBehaviour>().Seek();
-            GetComponent<SeekingBehaviour>().SetTarget(beeTarget.position);
-            isAttacking = true;
             chasingTimer += Time.deltaTime;
-            if (chasingTimer>= maxTimer)
-            {
-                human.humanAggressionAmount = 0;
-                isAttacking = false;
-                GetComponent<Patroling>().enabled = true;
-                this.enabled = false;
-
-            }
-
-
         }
+
+        if (chasingTimer>= maxChasingTimer)
+        {
+            human.humanAggressionAmount = 0;
+            isAttacking = false;
+            chasingTimer = 0;
+            this.enabled = false;
+            patroling.enabled = true;
+            
+        }
+
+        //beesNear.Sort();
 
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PeassantBees") && isAttacking==true)
+        if (other.CompareTag("PeassantBees") && !beesNear.Contains(other.gameObject) && isAttacking==true)
         {
-            //Destroy(peasants.neighbourPeassants[Random.Range(2,4)], 0.5f); //not sure if this actually destoys random elements..
+            beesNear.Add(other.gameObject);            
+            killTimer += Time.deltaTime;
+
+            if (killTimer >= maxKillTimer)
+            {
+                Destroy(beesNear[Random.Range(2, 7)], 0.5f);
+                killTimer = 0;
+            }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        beesNear.Remove(other.gameObject);
+    }
 
+    void SortingTheBees(GameObject[] array)
+    {
+        var beesDistance = Vector3.Distance(peasants.transform.position, transform.position);
+        //beesNear list should be the array here 
+        for (int i = 0; i< array.Length; i++)
+        {
+            for (int j=i+1; j <array.Length; j++)
+            {
+                if (beesDistance<=3)
+                {
+
+                }
+            }
+        }
+    }
 }

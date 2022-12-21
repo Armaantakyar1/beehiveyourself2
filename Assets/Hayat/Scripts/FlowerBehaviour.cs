@@ -14,8 +14,6 @@ public class FlowerBehaviour : MonoBehaviour
     public float collectingNectarRate;
     public List<PeasantBees> beesInFlowers = new();
     public bool nectarIsAvailable = true;
-    [SerializeField] TextMeshProUGUI nectarLeftInTheFlowerText;
-    [SerializeField] GameObject flowerNectarCanvas;
     [SerializeField] BeeDisatcher beeDispatcherScript;
     [SerializeField] GameObject LeaderBee;
     [SerializeField] nectarBheaviour beeNectarScript;
@@ -71,8 +69,6 @@ public class FlowerBehaviour : MonoBehaviour
                 beeNectarScript.stopCollection();
             }
 
-            flowerNectarCanvas.SetActive(true);
-            nectarLeftInTheFlowerText.text = this.flowerNectarAmount.ToString("0");
             if (Input.GetKeyDown(KeyCode.E) && nectarIsAvailable == false)
             {
                 Destroy(this.flower);
@@ -81,15 +77,7 @@ public class FlowerBehaviour : MonoBehaviour
 
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("PeassantBees"))
-        {
-            flowerNectarCanvas.SetActive(false);
 
-        }
-        
-    }
     public void nectarAmountCheck()
     {
         if (flowerNectarAmount <= 0)

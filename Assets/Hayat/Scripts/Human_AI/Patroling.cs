@@ -31,6 +31,7 @@ public class Patroling : MonoBehaviour
 
         if (Vector3.Distance(this.transform.position, destinationPoints[index].position) <= 0.5f)
         {
+            GetComponent<Attacking>().chasingTimer = 0;
             Debug.Log("distance idk");
             index++;
             Debug.Log("index is increasing");

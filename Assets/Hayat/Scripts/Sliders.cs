@@ -20,6 +20,6 @@ public class Sliders : MonoBehaviour
     public void SetMaxValue(float specificValue)
     {
         slider.maxValue = specificValue;
-        slider.value = specificValue;
+        specificValue= slider.value;
     }
 }
