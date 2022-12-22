@@ -14,16 +14,20 @@ public class SavingSystem : MonoBehaviour
         if (system!= null)
         {
             Debug.Log("There is already a saving system initialized");
+
+
+
+
         }
         system = this;
     }
-    public static void Saving()
+    public static void Saving(movement move)
     {
         ///Saves current game
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/Player/";
+        string path = Application.persistentDataPath + "/play.bee";
         FileStream stream = new FileStream(path, FileMode.Create);
-        PlayerData data = new PlayerData();
+        PlayerData data = new PlayerData(move);
         formatter.Serialize(stream, data);
         stream.Close();
     }
@@ -31,7 +35,7 @@ public class SavingSystem : MonoBehaviour
     public static PlayerData Load()
     {
         ///Loads a saved game
-        string path = Application.persistentDataPath + "/Player/";
+        string path = Application.persistentDataPath + "/play.bee";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
