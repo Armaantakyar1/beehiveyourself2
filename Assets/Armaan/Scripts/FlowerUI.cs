@@ -17,11 +17,11 @@ public class FlowerUI : MonoBehaviour
     void Update()
     {
         
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                setRetrive = true;
-            }
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            setRetrive = true;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
         {
             setRetrive = false;
         }

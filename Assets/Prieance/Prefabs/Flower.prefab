@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 373986011158565984}
   - component: {fileID: 5046899262460216089}
   - component: {fileID: 6229578927594878277}
+  - component: {fileID: 7621765279872416839}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Flowers
@@ -69,7 +70,7 @@ MonoBehaviour:
   flowerPosition: {fileID: 1169184601898721536}
   flower: {fileID: 2896914201573185300}
   numberOfBes: 0
-  collectionTimer: 0
+  collectionTimer: 5
   collectingNectarRate: 0.3
   beesInFlowers: []
   nectarIsAvailable: 0
@@ -104,7 +105,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509b855482a37ae418320dac20ecc810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pollen: {fileID: 0}
+  pollen: {fileID: 2248208711933660903}
+--- !u!114 &7621765279872416839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896914201573185300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f85d2e874ef5a9449b2c7bb7ab32a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: {fileID: 1768003220369291764, guid: f9206c34d9bbdd04ca4d298f1efa781c, type: 3}
+  retrive: {fileID: 893095166069548473, guid: fcf77fba816a5d947bf34e60f02b9646, type: 3}
 --- !u!1001 &1329465558407157552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,6 +417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
+--- !u!198 &2248208711933660903 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4759439180100030238, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
+  m_PrefabInstance: {fileID: 6719319374144913913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4489681198274643210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7165609766002607347, guid: 97ef7c7629b791a42a8b8adf4e30eebc, type: 3}
