@@ -5,7 +5,7 @@ using System.Linq;
 
 public class SavingSystem : MonoBehaviour
 {
-    public static SavingSystem system { get; private set; }
+    /*public static SavingSystem system { get; private set; }
     PlayerData playerData;
 
     void Start()
@@ -46,5 +46,5 @@ public class SavingSystem : MonoBehaviour
         }
         else { return null; }
     }
-
+    */
 }

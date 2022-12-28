@@ -18,7 +18,7 @@ public class Attacking : MonoBehaviour
     [SerializeField] List<GameObject> beesNear = new List<GameObject>();
     void Start()
     {
-        patroling.enabled = false;
+        patroling.enabled = false; 
         GetComponent<Inspecting>().enabled = false;
         GetComponent<SeekingBehaviour>().SetTarget(beeTarget.position);
         human = GetComponent<AggressionMeter>();

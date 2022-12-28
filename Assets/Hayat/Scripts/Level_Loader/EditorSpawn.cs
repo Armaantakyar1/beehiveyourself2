@@ -19,7 +19,7 @@ public class EditorSpawn : EditorWindow
         name = EditorGUILayout.TextField("Object name", name);
         radius = EditorGUILayout.IntField("Radius", radius);
         prefabToSpawn = EditorGUILayout.ObjectField("Prefab To Spawn", prefabToSpawn, typeof(GameObject), false) as GameObject;
-        if(GUILayout.Button("this Button!!!!!!!!!!!!!!!"))
+        if(GUILayout.Button("Spawn Object"))
         {
             Spawn();
         }
