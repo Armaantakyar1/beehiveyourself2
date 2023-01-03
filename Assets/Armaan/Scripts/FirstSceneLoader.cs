@@ -20,4 +20,8 @@ public class FirstSceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
