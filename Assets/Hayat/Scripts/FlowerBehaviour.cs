@@ -60,7 +60,7 @@ public class FlowerBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (beesInFlowers.Count >= 1)
+        if (beesInFlowers.Count >= 2)
         {
             return;
         }
