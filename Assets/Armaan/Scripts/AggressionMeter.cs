@@ -21,6 +21,7 @@ public class AggressionMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         PeasantBees peasants = GetComponent<PeasantBees>();
         //slider = GetComponent<Sliders>();
         slider.SetMaxValue(beeMaxAggressionAmount);
@@ -48,6 +49,7 @@ public class AggressionMeter : MonoBehaviour
             human.humanIsAttacking = true;
         }
         slider.SetValue(beeAggressionAmount);
+        
         Debug.Log("bee slider should move");
     }
 

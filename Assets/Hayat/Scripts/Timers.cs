@@ -9,10 +9,12 @@ public class Timers : MonoBehaviour
     [SerializeField] Text worldTimerText;
     public bool inBeehive;
     [SerializeField] GameObject restartButton;
+    LoseState loose;
 
     // Start is called before the first frame update
     void Start()
     {
+        LoseState lose = GetComponent<LoseState>();
         restartButton.SetActive(false);
     }
 
@@ -32,6 +34,7 @@ public class Timers : MonoBehaviour
             if (worldTimer <= 0)
             {
                 //gameover
+                loose.enabled = true;
                 restartButton.SetActive(true);
                 Time.timeScale = 0;
             }
